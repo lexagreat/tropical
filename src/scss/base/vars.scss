@@ -1,2 +1,118 @@
 $tablet: 1024px;
 $mobile: 568px;
+
+$mainFont: "Manrope", sans-serif;
+
+:root {
+   --header: 96px;
+   --container: calc((100vw - 1376px) / 2);
+   @media (max-width: 1440px) {
+      --container: 32px;
+   }
+   @media (max-width: $tablet) {
+      --container: 20px;
+   }
+   @media (max-width: $mobile) {
+      --header: 68px;
+      --container: 12px;
+   }
+}
+
+@mixin h1 {
+   font-weight: 500;
+   font-size: 54px;
+   line-height: 110%;
+   letter-spacing: -2%;
+}
+
+@mixin h2 {
+   font-weight: 500;
+   font-size: 40px;
+   line-height: 110%;
+   letter-spacing: -2%;
+}
+@mixin h1-tablet {
+   font-weight: 500;
+   font-size: 48px;
+   line-height: 110%;
+   letter-spacing: -2%;
+}
+
+@mixin h2-tablet {
+   font-weight: 500;
+   font-size: 36px;
+   line-height: 110%;
+   letter-spacing: -2%;
+}
+@mixin h1-mobile {
+   font-weight: 500;
+   font-size: 36px;
+   line-height: 110%;
+   letter-spacing: -2%;
+}
+
+@mixin h2-mobile {
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 110%;
+   letter-spacing: -2%;
+}
+@mixin h3 {
+   font-weight: 500;
+   font-size: 24px;
+   line-height: 120%;
+}
+@mixin h3-mobile {
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 120%;
+}
+@mixin h4 {
+   font-weight: 500;
+   font-size: 18px;
+   line-height: 140%;
+}
+@mixin price {
+   font-weight: 600;
+   font-size: 24px;
+   line-height: 120%;
+}
+@mixin price-tablet {
+   font-weight: 600;
+   font-size: 20px;
+   line-height: 120%;
+}
+
+@mixin body-text {
+   font-size: 16px;
+   line-height: 140%;
+}
+
+@mixin semibold_14 {
+   font-weight: 600;
+   font-size: 14px;
+   line-height: 140%;
+}
+
+@mixin medium_14 {
+   font-weight: 500;
+   font-size: 14px;
+   line-height: 140%;
+}
+@mixin semibold_12 {
+   font-weight: 600;
+   font-size: 12px;
+   line-height: 100%;
+}
+
+@mixin medium_12 {
+   font-weight: 500;
+   font-size: 12px;
+   line-height: 120%;
+}
+
+@mixin regular_14 {
+   font-weight: 400;
+   font-size: 14px;
+   line-height: 130%;
+}

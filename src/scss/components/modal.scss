@@ -1,0 +1,39 @@
+body.lock {
+   overflow: hidden;
+}
+
+.modal {
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   background-color: #000000b2;
+   opacity: 0;
+   visibility: hidden;
+   -webkit-transition: 0.5s;
+   -o-transition: 0.5s;
+   transition: 0.5s;
+   overflow-y: auto;
+   overflow-x: hidden;
+   // cursor: pointer;
+   z-index: 101;
+}
+.modal__close {
+   position: absolute;
+   top: 12px;
+   right: 12px;
+   --size: 48px;
+}
+.modal__content {
+   width: 100%;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   position: absolute;
+   background-color: #f3f5f7;
+}
+.modal.open {
+   opacity: 1;
+   visibility: visible;
+}

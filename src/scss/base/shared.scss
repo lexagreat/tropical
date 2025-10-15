@@ -1,6 +1,11 @@
 .collapse:not(.collapse_show) {
    display: none;
 }
+body {
+   font-family: $mainFont;
+   color: #0d332f;
+   background-color: #f5f3ef;
+}
 .wrapper {
    min-height: 100vh;
    display: flex;
@@ -9,9 +14,14 @@
 }
 .main {
    flex: 1;
-   // padding-top: var(--header);
+   padding-top: var(--header);
 }
 
+.container {
+   padding: 0 var(--container);
+   width: 100%;
+   margin: 0 auto;
+}
 .circle {
    --size: 32px;
    flex: 0 0 var(--size);
@@ -62,5 +72,144 @@ label {
    display: none;
    @media (max-width: $tablet) {
       display: flex;
+   }
+}
+
+.h1 {
+   @include h1;
+   @media (max-width: $tablet) {
+      @include h1-tablet;
+   }
+   @media (max-width: $mobile) {
+      @include h1-mobile;
+   }
+}
+.h2 {
+   @include h2;
+   @media (max-width: $tablet) {
+      @include h2-tablet;
+   }
+   @media (max-width: $mobile) {
+      @include h2-mobile;
+   }
+}
+.h3 {
+   @include h3;
+
+   @media (max-width: $mobile) {
+      @include h3-mobile;
+   }
+}
+.h4 {
+   @include h4;
+}
+.price {
+   @include price;
+   @media (max-width: $tablet) {
+      @include price-tablet;
+   }
+}
+.body-text {
+   @include body-text;
+   @media (max-width: $mobile) {
+      @include regular_14;
+   }
+}
+.semibold_14 {
+   @include semibold_14;
+}
+.medium_14 {
+   @include medium_14;
+}
+.regular_14 {
+   @include regular_14;
+}
+.semibold_12 {
+   @include semibold_12;
+}
+.medium_12 {
+   @include medium_12;
+}
+.btn {
+   --size: 56px;
+   border-radius: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: 0.3s;
+   height: var(--size);
+   @include medium_14;
+   &--green {
+      background-color: #0d332f;
+      color: white;
+      @media (hover: hover) {
+         &:hover {
+            background-color: #07201d;
+         }
+      }
+      &:active {
+         background-color: #07201d;
+      }
+   }
+   &--transparent {
+   }
+   &--grey {
+      background-color: #e0e3de;
+      @media (hover: hover) {
+         &:hover {
+            background-color: #cacdc8;
+         }
+      }
+      &:active {
+         background-color: #cacdc8;
+      }
+   }
+   &--blur {
+      background: #f5f3efcc;
+      backdrop-filter: blur(20px);
+   }
+   &.disabled,
+   &:disabled {
+      background-color: #0d332f0d !important;
+      color: #0d332f33 !important;
+   }
+}
+.app-input {
+   position: relative;
+   --size: 56px;
+   --left: 18px;
+   --bg: #e0e3de;
+   &.filled,
+   &:has(input:focus) {
+      label {
+         translate: 0 -90%;
+         font-size: 11px;
+      }
+   }
+   input {
+      width: 100%;
+      height: var(--size);
+      border-radius: 40px;
+      background: var(--bg);
+      padding-left: var(--left);
+      @include medium_14;
+      color: #0d332f;
+      &::placeholder {
+         color: #0d332f66;
+      }
+   }
+   label {
+      position: absolute;
+      top: 50%;
+      left: var(--left);
+      transform: translateY(-50%);
+      @include medium_14;
+      color: #0d332f66;
+      pointer-events: none;
+      transition: 0.3s;
+   }
+   @media (max-width: $mobile) {
+      --size: 48px;
+      --left: 14px;
    }
 }

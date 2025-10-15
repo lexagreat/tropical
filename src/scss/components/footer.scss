@@ -1,0 +1,108 @@
+.footer {
+   background-color: #e0e3de;
+   border-radius: 40px;
+   margin-bottom: 20px;
+   padding: 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 64px;
+   @media (max-width: $tablet) {
+      padding: 32px;
+   }
+   @media (max-width: $mobile) {
+      padding: 24px;
+      gap: 56px;
+      border-radius: 32px;
+      margin-bottom: 12px;
+   }
+   // .footer__upper
+
+   &__upper {
+      display: flex;
+      justify-content: space-between;
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         gap: 56px;
+      }
+   }
+
+   // .footer__links
+
+   &__links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      flex: 0 1 492px;
+      a {
+         color: #0d332f;
+         transition: 0.3s;
+         @media (hover: hover) {
+            &:hover {
+               opacity: 0.5;
+            }
+         }
+      }
+      @media (max-width: $mobile) {
+         flex: unset;
+         a {
+            font-size: 18px;
+         }
+      }
+   }
+
+   // .footer__buttons
+
+   &__buttons {
+      display: flex;
+      gap: 6px;
+      .btn:not(.circle) {
+         white-space: nowrap;
+         border: 1px solid #0d332f26;
+         padding: 0 18px;
+         color: #0d332f;
+         @media (hover: hover) {
+            &:hover {
+               border-color: #0d332f99;
+            }
+         }
+      }
+      @media (max-width: $mobile) {
+         .btn {
+            --size: 48px;
+         }
+      }
+   }
+
+   // .footer__down
+
+   &__down {
+      display: flex;
+      align-items: flex-end;
+      gap: 86px;
+      a {
+         &:nth-child(2) {
+            flex: 1;
+            @media (max-width: $mobile) {
+               flex: unset;
+               margin-bottom: 20px;
+               display: block;
+            }
+         }
+      }
+      & > * {
+         color: #0d332f66;
+      }
+      span {
+         @include regular_14;
+         font-size: 12px;
+         a {
+            color: #0d332f;
+         }
+      }
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         align-items: flex-start;
+         gap: 8px;
+      }
+   }
+}
