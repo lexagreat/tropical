@@ -1,0 +1,429 @@
+.receipts-aside {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   // .receipts-aside__item
+
+   &__item {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      .hidden {
+         display: none;
+      }
+      .btn {
+         padding: 0 18px;
+         align-items: center;
+         display: flex;
+         justify-content: center;
+         height: var(--size);
+         width: fit-content;
+         background-color: transparent;
+         color: #0d332f;
+         &.active {
+            background-color: #e0e3de;
+         }
+         @media (hover: hover) {
+            &:hover {
+               background-color: #e0e3de;
+            }
+         }
+      }
+      button {
+         padding: 0 18px;
+
+         cursor: pointer;
+         @include medium_14;
+         &.active {
+            span {
+               &:nth-child(1) {
+                  display: none;
+               }
+               &:nth-child(2) {
+                  display: block;
+               }
+            }
+         }
+         span {
+            border-bottom: 1px solid #0d332f;
+            &:nth-child(2) {
+               display: none;
+            }
+         }
+      }
+   }
+
+   // .receipts-aside__title
+
+   &__title {
+      @include medium_14;
+      color: #0d332f66;
+   }
+
+   // .receipts-aside__list
+
+   &__list {
+   }
+}
+.receipts {
+   .catalog-section__list {
+      row-gap: 32px;
+   }
+}
+.receipts-filters {
+   margin-bottom: -32px;
+   flex-direction: column;
+
+   // .receipts-filters__header
+
+   &__header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 8px 0;
+   }
+
+   // .receipts-filters__item
+
+   &__item {
+      height: 20px;
+      display: flex;
+      gap: 8px;
+      @include medium_14;
+      align-items: center;
+      &.active {
+         img {
+            rotate: -90deg;
+         }
+      }
+      img {
+         rotate: 90deg;
+         transition: 0.3s;
+      }
+   }
+
+   // .receipts-filters__main
+
+   &__main {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: 0.3s;
+      &:has(.receipts-filters__out.active) {
+         margin-top: 24px;
+      }
+   }
+
+   // .receipts-filters__out
+
+   &__out {
+      display: none;
+      &.active {
+         display: block;
+      }
+      ul {
+         flex-wrap: wrap;
+         display: flex;
+         gap: 4px;
+         .btn {
+            padding: 0 18px;
+            background: white;
+            color: #0d332f;
+            @media (max-width: $mobile) {
+               --size: 44px;
+               padding: 0 12px;
+            }
+            &.active {
+               background-color: #e0e3de;
+            }
+         }
+      }
+   }
+}
+.products-section {
+   .mobile {
+      .btn {
+         width: 100%;
+      }
+   }
+   &__subh {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-right {
+         display: flex;
+         align-items: center;
+         gap: 12px;
+         span {
+            @include regular_14;
+            color: #0d332f66;
+         }
+         .btn {
+            padding: 0 18px;
+            @media (max-width: $mobile) {
+               display: none;
+            }
+         }
+      }
+   }
+}
+.receipt-steps {
+   // .receipt-steps__item
+
+   &__item {
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      gap: 48px;
+      border-bottom: 1px solid #0d332f26;
+      &:last-child {
+         border-bottom: none;
+      }
+      @media (max-width: $mobile) {
+         flex-direction: column;
+         gap: 16px;
+         align-items: flex-start;
+      }
+   }
+
+   // .receipt-steps__image
+
+   &__image {
+      width: 100%;
+      flex: 0 0 420px;
+      border-radius: 32px;
+      overflow: hidden;
+      @media (max-width: $tablet) {
+         flex: 0 0 354px;
+      }
+      @media (max-width: $mobile) {
+         flex: 0 0 240px;
+      }
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   // .receipt-steps__main
+
+   &__main {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      @media (max-width: $mobile) {
+         gap: 16px;
+      }
+   }
+
+   // .receipt-steps__heading
+
+   &__heading {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   // .receipt-steps__index
+
+   &__index {
+      color: #0d332f66;
+      font-size: 12px;
+   }
+
+   // .receipt-steps__title
+
+   &__title {
+      @media (max-width: $mobile) {
+         font-size: 18px;
+      }
+   }
+
+   // .receipt-steps__text
+
+   &__text {
+      color: #0d332fcc;
+      @media (max-width: $mobile) {
+         @include body-text;
+      }
+   }
+}
+.receipt-ingredients {
+   padding: 40px;
+   border-radius: 40px;
+   background-color: #e0e3de;
+   display: flex;
+   flex-direction: column;
+   gap: 28px;
+   @media (max-width: $tablet) {
+      padding: 32px;
+   }
+   @media (max-width: $mobile) {
+      padding: 20px;
+      border-radius: 32px;
+
+      gap: 20px;
+   }
+   // .receipt-ingredients__title
+
+   &__title {
+   }
+
+   // .receipt-ingredients__list
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 26px;
+      @media (max-width: $mobile) {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+   // .receipt-ingredients__item
+
+   &__item {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px dashed #0d332f26;
+   }
+
+   // .receipt-ingredients__key
+
+   &__key {
+      @include regular_14;
+      color: #0d332fcc;
+   }
+
+   // .receipt-ingredients__value
+
+   &__value {
+      font-weight: 600;
+
+      font-size: 12px;
+
+      line-height: 100%;
+
+      color: #0d332f;
+   }
+}
+.receipt-hero {
+   display: flex;
+   align-items: center;
+   @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+   }
+   // .receipt-hero__image
+
+   &__image {
+      width: 100%;
+      border-radius: 32px;
+      overflow: hidden;
+      flex: 0 0 385px;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+      @media (max-width: $mobile) {
+         flex: 0 0 280px;
+         border-radius: 28px;
+      }
+   }
+
+   // .receipt-hero__main
+
+   &__main {
+      padding: 0 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      @media (max-width: $tablet) {
+         padding-right: 0;
+      }
+      @media (max-width: $mobile) {
+         gap: 0;
+         padding: 0;
+      }
+   }
+
+   // .receipt-hero__title
+
+   &__title {
+   }
+
+   // .receipt-hero__text
+
+   &__text {
+      color: #0d332fcc;
+      @media (max-width: $mobile) {
+         @include regular_14;
+         margin-top: 20px;
+         margin-bottom: 28px;
+      }
+   }
+
+   // .receipt-hero__stats
+
+   &__stats {
+   }
+
+   // .receipt-hero__stat
+
+   &__stat {
+      border-bottom: 1px solid #0d332f26;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   // .receipt-hero__key
+
+   &__key {
+      @include regular_14;
+   }
+
+   // .receipt-hero__value
+
+   &__value {
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 100%;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+   }
+}
+.adding-modal {
+   // .adding-modal__content
+
+   &__content {
+      width: 460px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 16px;
+      transform: unset;
+      translate: -50% 0;
+      background-color: #f5f3ef;
+      border-radius: 40px;
+      top: 40px;
+      @media (max-width: $mobile) {
+         width: calc(100vw - 40px);
+      }
+   }
+
+   // .adding-modal__close
+
+   &__close {
+   }
+}

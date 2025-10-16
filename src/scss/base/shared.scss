@@ -139,6 +139,15 @@ label {
    transition: 0.3s;
    height: var(--size);
    @include medium_14;
+   position: relative;
+   .loader {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+      scale: 0.3;
+   }
    &--green {
       background-color: #0d332f;
       color: white;
@@ -153,6 +162,17 @@ label {
    }
    &--transparent {
    }
+   &.loading {
+      pointer-events: none;
+      span {
+         &:not(.loader) {
+            opacity: 0;
+         }
+         &.loader {
+            display: block;
+         }
+      }
+   }
    &--grey {
       background-color: #e0e3de;
       @media (hover: hover) {
@@ -162,6 +182,18 @@ label {
       }
       &:active {
          background-color: #cacdc8;
+      }
+   }
+   &--orange {
+      background-color: #ffb12b;
+
+      @media (hover: hover) {
+         &:hover {
+            background-color: #feca26;
+         }
+      }
+      &:active {
+         background-color: #feca26;
       }
    }
    &--blur {
@@ -211,5 +243,95 @@ label {
    @media (max-width: $mobile) {
       --size: 48px;
       --left: 14px;
+   }
+}
+.app-checkbox {
+   input {
+      display: none;
+   }
+   display: flex;
+   align-items: center;
+   gap: 8px;
+   @include medium_14;
+   color: #0d332f;
+   div {
+      backdrop-filter: blur(25px);
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      border-radius: 4px;
+      background-color: white;
+      transition: 0.3s;
+      position: relative;
+      &::after {
+         content: "";
+         display: block;
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-image: url(../img/icons/app-checkbox.svg);
+         background-size: 100%;
+         background-repeat: no-repeat;
+         background-position: center;
+         opacity: 0;
+         transition: 0.3s;
+      }
+   }
+   &:has(input:checked) {
+      div {
+         &::after {
+            opacity: 1;
+         }
+      }
+   }
+}
+.loader {
+   color: #fff;
+   font-size: 10px;
+   width: 1em;
+   height: 1em;
+   border-radius: 50%;
+   position: relative;
+   text-indent: -9999em;
+   animation: mulShdSpin 1.3s infinite linear;
+   transform: translateZ(0);
+}
+
+@keyframes mulShdSpin {
+   0%,
+   100% {
+      box-shadow: 0 -3em 0 0.2em, 2em -2em 0 0em, 3em 0 0 -1em, 2em 2em 0 -1em,
+         0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 0;
+   }
+   12.5% {
+      box-shadow: 0 -3em 0 0, 2em -2em 0 0.2em, 3em 0 0 0, 2em 2em 0 -1em,
+         0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+   }
+   25% {
+      box-shadow: 0 -3em 0 -0.5em, 2em -2em 0 0, 3em 0 0 0.2em, 2em 2em 0 0,
+         0 3em 0 -1em, -2em 2em 0 -1em, -3em 0 0 -1em, -2em -2em 0 -1em;
+   }
+   37.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 0, 2em 2em 0 0.2em,
+         0 3em 0 0em, -2em 2em 0 -1em, -3em 0em 0 -1em, -2em -2em 0 -1em;
+   }
+   50% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 0em,
+         0 3em 0 0.2em, -2em 2em 0 0, -3em 0em 0 -1em, -2em -2em 0 -1em;
+   }
+   62.5% {
+      box-shadow: 0 -3em 0 -1em, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+         0 3em 0 0, -2em 2em 0 0.2em, -3em 0 0 0, -2em -2em 0 -1em;
+   }
+   75% {
+      box-shadow: 0em -3em 0 -1em, 2em -2em 0 -1em, 3em 0em 0 -1em,
+         2em 2em 0 -1em, 0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0.2em,
+         -2em -2em 0 0;
+   }
+   87.5% {
+      box-shadow: 0em -3em 0 0, 2em -2em 0 -1em, 3em 0 0 -1em, 2em 2em 0 -1em,
+         0 3em 0 -1em, -2em 2em 0 0, -3em 0em 0 0, -2em -2em 0 0.2em;
    }
 }

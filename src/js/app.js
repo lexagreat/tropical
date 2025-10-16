@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
    addressModal();
    validateInputs();
    checkout();
+   receipts();
+   authModal();
 });
 
 function productsSection() {
@@ -275,6 +277,68 @@ function checkout() {
       }
    });
    tabs('[name="checkout2"]', "[data-checkout-2]");
+}
+function receipts() {
+   const moreBtn = document.querySelectorAll(".receipts-aside__item button");
+
+   if (!moreBtn.length) return;
+   moreBtn.forEach((btn) => {
+      btn.addEventListener("click", () => {
+         const parent = btn.closest(".receipts-aside__item");
+         const items = parent.querySelectorAll("li");
+         if (btn.classList.contains("active")) {
+            btn.classList.remove("active");
+            items.forEach((item, index) => {
+               index > 4
+                  ? item.classList.add("hidden")
+                  : item.classList.remove("hidden");
+            });
+         } else {
+            btn.classList.add("active");
+            items.forEach((item) => {
+               item.classList.remove("hidden");
+            });
+         }
+         btn.closest("li").classList.remove("hidden");
+      });
+   });
+   const filtersBtns = document.querySelectorAll(".receipts-filters__item");
+   const outs = document.querySelectorAll(".receipts-filters__out");
+   filtersBtns.forEach((btn, index) => {
+      btn.addEventListener("click", () => {
+         if (btn.classList.contains("active")) {
+            btn.classList.remove("active");
+            outs[index].classList.remove("active");
+            console.log(outs[index]);
+            return;
+         }
+         outs.forEach((out, i) => {
+            if (index === i) {
+               out.classList.add("active");
+            } else {
+               out.classList.remove("active");
+            }
+         });
+         filtersBtns.forEach((elem, i) => {
+            if (index === i) {
+               elem.classList.add("active");
+            } else {
+               elem.classList.remove("active");
+            }
+         });
+      });
+   });
+}
+function authModal() {
+   const backBtn = document.querySelector(".auth-modal__back");
+   if (!backBtn) return;
+   backBtn.addEventListener("click", () => {
+      const currentStep = document.querySelector(".auth-modal__step.active");
+      if (!currentStep) return;
+      currentStep.classList.remove("active");
+      const previousStep = currentStep.previousElementSibling;
+      previousStep.classList.add("active");
+   });
 }
 // Popup
 const popupLinks = document.querySelectorAll(".modal__link");

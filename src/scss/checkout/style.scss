@@ -101,28 +101,6 @@
 
    &__checkbox {
       margin-top: var(--gap);
-      input {
-         display: none;
-      }
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      @include medium_14;
-      color: #0d332f;
-      div {
-         backdrop-filter: blur(25px);
-         width: 18px;
-         height: 18px;
-         flex: 0 0 18px;
-         border-radius: 4px;
-         background-color: white;
-         transition: 0.3s;
-      }
-      &:has(input:checked) {
-         div {
-            background-color: #0d332f;
-         }
-      }
    }
 
    // .checkout-inputs__hidden

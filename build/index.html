@@ -2309,6 +2309,74 @@
             </div>
          </div>
       </div>
+      <div class="modal auth-modal" id="auth-modal">
+         <div class="modal__content auth-modal__content">
+            <button class="address-modal__close modal__close btn btn--grey circle">
+               <img src="img/icons/cross.svg" alt="">
+            </button>
+            <div class="auth-modal__step auth-modal__first active">
+               <div class="auth-modal__main">
+                  <div class="auth-modal__image">
+                     <img src="img/auth-modal.png" alt="">
+                  </div>
+                  <div class="auth-modal__text">
+                     <p class="h3">Вход или регистрация</p>
+                     <p style="color: #0D332FCC;" class="body-text">Чтобы сохранять корзину, следить за историей покупок
+                        и
+                        статусом заказа</p>
+                  </div>
+                  <div class="auth-modal__form">
+                     <div class="app-input">
+                        <input type="text" data-phone>
+                        <label>Номер телефона*</label>
+                     </div>
+                     <!-- Комментарий для Вовы, добавить класс loading, при нажатии на кнопку -->
+                     <button class="btn btn--green">
+                        <span>Получить код</span>
+                        <span class="loader"></span>
+                     </button>
+                  </div>
+               </div>
+               <div class="auth-modal__footer">
+                  <label class="app-checkbox">
+                     <input type="checkbox">
+                     <div></div>
+                     <span class="medium_12" style="color: #0D332F66;">Я согласен с <a style="color: #0D332F;" href="#"
+                           target="_blank">Согласием
+                           на обработку персональных данных</a></span>
+                  </label>
+                  <label class="app-checkbox">
+                     <input type="checkbox">
+                     <div></div>
+                     <span class="medium_12" style="color: #0D332F66;">Я согласен с <a style="color: #0D332F;" href="#"
+                           target="_blank">Соглашением
+                           на оферту о сотрудничестве</a></span>
+                  </label>
+               </div>
+
+            </div>
+            <div class="auth-modal__step auth-modal__second">
+               <button class="auth-modal__back">
+                  <img src="img/icons/arrow-back.svg" alt="">
+               </button>
+               <div class="auth-modal__text">
+                  <p class="h3">Подтвердите номер</p>
+                  <p style="color: #0D332FCC;" class="body-text">Мы отправили код на номер
+                     <span style="color: #FF6D2A;">7 (969)657-54-33</span>
+                  </p>
+               </div>
+               <div class="auth-modal__form">
+                  <div class="app-input">
+                     <input type="text">
+                     <label>Введите код</label>
+                  </div>
+               </div>
+               <p class="auth-modal__timer">Запросить новый код можно через
+                  <span>00:14</span>
+               </p>
+            </div>
+         </div>
+      </div>
    </div>
    <script src="https://unpkg.com/imask"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
