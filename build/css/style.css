@@ -4877,6 +4877,13 @@ body.lock {
 .order-item.awaiting .order-item__button {
   background-color: rgba(0, 0, 0, 0.2);
 }
+@media (hover: hover) {
+  .order-item.awaiting .order-item__button:hover {
+    background: rgba(0, 0, 0, 0.2);
+    -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+  }
+}
 .order-item.on-the-way .order-item__status {
   background-color: #d42d4b;
   color: white;
@@ -4988,6 +4995,13 @@ body.lock {
   right: 12px;
   background-color: #ff6d2a;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+@media (hover: hover) {
+  .order-item__button:hover {
+    background-color: #ff4e2a;
+  }
 }
 @media (max-width: 568px) {
   .order-item__button {
@@ -5005,4 +5019,26 @@ body.lock {
       -ms-flex-align: center;
           align-items: center;
   margin-left: 4px;
+}
+
+.orders-empty {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+.orders-empty p {
+  color: rgba(13, 51, 47, 0.8);
+}
+.orders-empty .btn, .orders-empty .product-modal__tabs > ul label, .product-modal__tabs > ul .orders-empty label {
+  padding: 0 18px;
+  color: #0d332f;
 }
