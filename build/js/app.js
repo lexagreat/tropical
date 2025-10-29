@@ -345,6 +345,7 @@ function authModal() {
 function contacts() {
    function path() {
       const marker = document.querySelector(".contacts-path__marker");
+      if (!marker) return;
       marker.onclick = () => {
          marker.classList.toggle("active");
       };
@@ -375,7 +376,8 @@ function contacts() {
             return document.querySelector(id);
          })
          .filter(Boolean);
-
+      console.log(sections);
+      console.log(links);
       function updateActiveLink() {
          const scrollTop = window.scrollY;
          const offset = 150;
@@ -423,7 +425,7 @@ function about() {
       const animationDuration = scrollDistance / images.length;
 
       const gallery = document.querySelector(".about-hero__gallery");
-      const overlap = 0.2;
+      const overlap = 0.5;
 
       const tempDiv = document.createElement("div");
       tempDiv.style.width = "var(--container)";
@@ -444,10 +446,11 @@ function about() {
                end: `top -=${
                   index * animationDuration * overlap + animationDuration
                }`,
-               scrub: 0.1,
+               scrub: 0.5,
                invalidateOnRefresh: true,
                markers: false,
             },
+            ease: "power2.inOut",
          };
 
          if (image.classList.contains("last")) {

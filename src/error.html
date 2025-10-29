@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+@@include('components/_head.html',{
+"lang":"en",
+"title":"New project",
+"description":"",
+"keywords":"",
+})
+
+<body>
+   <div class="wrapper">
+      @@include('components/_header.html')
+      <main class="main">
+         <div class="error-page">
+            <img src="img/404.png" alt="">
+            <div class="container">
+               <div class="error-page__wrapper">
+                  <h1 class="error-page__title">404</h1>
+                  <div class="body-text">
+                     К сожалению, такой страницы не существует или она была удалена.
+                  </div>
+
+                  <a href="#" class="btn btn--green">В каталог</a>
+               </div>
+            </div>
+         </div>
+      </main>
+
+
+   </div>
+   @@include('components/_scripts.html')
+</body>
+
+</html>
