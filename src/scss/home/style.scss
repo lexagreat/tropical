@@ -1190,7 +1190,7 @@
       width: calc(100% - (var(--total) - 1) * var(--width));
       @media (max-width: $tablet) {
          .faq-slide__wrapper {
-            max-height: 300vh;
+            max-height: 600px;
          }
       }
    }
@@ -1305,21 +1305,22 @@
 }
 .cart-btn {
    display: none;
+   position: fixed;
+   right: var(--container);
+   bottom: 20px;
+   z-index: 10;
+   background-color: #d42d4b;
+   color: white;
+   padding: 0 20px;
+   gap: 12px;
+   img {
+      width: 24px;
+      height: 24px;
+      flex: 0 0 24px;
+   }
    @media (max-width: $tablet) {
-      display: flex;
-      position: fixed;
-      right: var(--container);
       bottom: var(--container);
-      z-index: 10;
-      background-color: #d42d4b;
-      color: white;
-      padding: 0 20px;
-      gap: 12px;
-      img {
-         width: 24px;
-         height: 24px;
-         flex: 0 0 24px;
-      }
+      display: flex;
    }
    @media (max-width: $mobile) {
       --size: 48px;
@@ -1329,8 +1330,35 @@
    // .cart-modal__content
 
    &__content {
-      width: 100vw;
-      height: 100svh;
+      width: 460px;
+      height: calc(100svh - 80px);
+      @media (min-width: 1025px) {
+         border-radius: 40px;
+         right: var(--container);
+         left: unset;
+         transform: unset;
+         translate: 0 -50%;
+         .home-cart__header,
+         .home-cart__delivery,
+         .home-cart__products,
+         .home-cart__items,
+         .cart-modal__header {
+            margin: 0 12px;
+         }
+         .home-cart {
+            height: unset;
+            flex: 1;
+         }
+         .cart-modal__main {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+         }
+      }
+      @media (max-width: $tablet) {
+         width: 100vw;
+         height: 100svh;
+      }
       overflow: auto;
       @extend .scrollbar-none;
    }

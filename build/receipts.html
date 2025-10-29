@@ -4,6 +4,7 @@
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="format-detection" content="telephone=no">
    <meta name="description" content="">
    <meta name="keywords" content="">
    <link rel="shortcut icon" href="@@favicon.svg" type="image/svg+xml">
@@ -61,13 +62,515 @@
             <a href="#" class="header__user btn btn--green circle">
                <img src="img/icons/user.svg" alt="">
             </a>
-            <button class="header__burger btn btn--grey circle">
+            <button class="header__burger btn btn--grey circle modal__link" href="#header-menu-modal">
                <span></span>
             </button>
          </div>
       </div>
    </div>
 </header>
+<div class="modal header-menu__modal" id="header-menu-modal">
+   <div class="header-menu__content modal__wrapper scrollbar-none">
+      <div class="header-menu__upper">
+         <ul>
+            <li>
+               <div class="circle" style="background: #FFFFFF1A;">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M7.33105 1.33301C8.92244 1.33301 10.4489 1.96554 11.5742 3.09082C12.6993 4.21601 13.3319 5.74182 13.332 7.33301C13.332 8.70034 12.8628 10.018 12.0176 11.0762L14.4707 13.5293C14.7308 13.7898 14.731 14.2123 14.4707 14.4727C14.2104 14.733 13.7879 14.7327 13.5273 14.4727L11.0742 12.0195C10.016 12.8648 8.69839 13.334 7.33105 13.334C5.73986 13.3339 4.21405 12.7013 3.08887 11.5762C1.96359 10.4509 1.33105 8.92439 1.33105 7.33301C1.33114 5.74174 1.96366 4.21602 3.08887 3.09082C4.21407 1.96562 5.73979 1.33309 7.33105 1.33301ZM7.33105 2.66699C6.09358 2.66708 4.90726 3.15915 4.03223 4.03418C3.15719 4.90921 2.66513 6.09553 2.66504 7.33301C2.66504 8.5706 3.15712 9.7577 4.03223 10.6328C4.90724 11.5077 6.09366 11.9999 7.33105 12C8.55459 12 9.72747 11.5177 10.5996 10.6611C10.6089 10.6506 10.6169 10.6389 10.627 10.6289C10.637 10.6189 10.6487 10.6108 10.6592 10.6016C11.5157 9.72942 11.998 8.55655 11.998 7.33301C11.998 6.09561 11.5058 4.9092 10.6309 4.03418C9.75575 3.15907 8.56865 2.66699 7.33105 2.66699Z"
+                        fill="white" />
+                  </svg>
+               </div>
+            </li>
+            <li>
+               <div class="circle" style="background: #FFFFFF1A;">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M14.3807 0.730791C14.6352 0.610247 14.9383 0.662697 15.1375 0.861651C15.3367 1.06078 15.3898 1.36393 15.2694 1.61849L9.26935 14.2855C9.14881 14.54 8.88062 14.6912 8.60041 14.6634C8.32037 14.6355 8.08762 14.4345 8.01935 14.1615L6.78303 9.21614L1.83771 7.97981C1.56477 7.91137 1.36447 7.67881 1.33674 7.39876C1.30909 7.11863 1.46026 6.8513 1.71467 6.73079L14.3807 0.730791ZM3.9676 7.13802L7.49494 8.01985L7.58185 8.04817C7.77835 8.12715 7.92805 8.29623 7.98029 8.50521L8.86115 12.0306L13.2645 2.7347L3.9676 7.13802Z"
+                        fill="white" />
+                  </svg>
+               </div>
+            </li>
+         </ul>
+         <div class="circle modal__close" style="background: #07201D66;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M13.7026 11.1446C13.9196 11.6419 13.9049 12.2201 13.6637 12.7239L20 19.0602L19.0602 20L12.7232 13.663C12.2201 13.9031 11.644 13.9161 11.1476 13.6997L4.90529 19.942L4 19.0367L10.2327 12.804C10.0001 12.2998 10.0075 11.7082 10.2533 11.1931L4.02349 4.96329L4.96329 4.02349L11.1924 10.2526C11.7082 10.0056 12.3019 9.99653 12.8069 10.2298L19.0367 4L19.942 4.90529L13.7026 11.1446Z"
+                  fill="white" />
+            </svg>
+         </div>
+
+      </div>
+      <ul class="header-menu__links">
+         <li>
+            <button>
+               <span>Фрукты</span>
+               <svg width="28" height="28" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M5.29286 2.25104C5.68335 1.91632 6.31727 1.91632 6.70776 2.25104L12.7071 7.39359C13.0976 7.72831 13.0976 8.27169 12.7071 8.60641L6.70776 13.749C6.31727 14.0837 5.68335 14.0837 5.29286 13.749C4.90238 13.4142 4.90238 12.8709 5.29286 12.5361L10.5848 8L5.29286 3.46386C4.90238 3.12914 4.90238 2.58575 5.29286 2.25104Z"
+                     fill="white" />
+               </svg>
+            </button>
+            <div class="collapse">
+               <ul>
+                  <li><a class="btn" href="#">Все</a></li>
+                  <li><a class="btn" href="#">Тайские</a></li>
+                  <li><a class="btn" href="#">Колумбийские</a></li>
+                  <li><a class="btn" href="#">Вьетнамские</a></li>
+               </ul>
+            </div>
+         </li>
+         <li><a href="#">Овощи</a></li>
+         <li><a href="#">Цветы</a></li>
+         <li><a href="#">Акции</a></li>
+         <li><a href="#">О компании</a></li>
+         <li><a href="#">Рецепты</a></li>
+         <li><a href="#">Контакты</a></li>
+      </ul>
+      <div class="header-menu__footer">
+         <a href="tel:+ 7 (960) 664-43-22" class="btn">
+            + 7 (960) 664-43-22
+         </a>
+         <a href="#" class="circle">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.2 3.79337C15.3911 2.984 14.4301 2.34262 13.3724 1.90612C12.3146 1.46963 11.1809 1.24666 10.0367 1.25004C5.23417 1.25004 1.325 5.14004 1.32333 9.9217C1.32124 11.4444 1.72264 12.9404 2.48667 14.2575L1.25 18.75L5.86917 17.5442C7.14777 18.237 8.5791 18.5996 10.0333 18.5992H10.0367C14.8383 18.5992 18.7475 14.7084 18.75 9.9267C18.7528 8.78637 18.5288 7.65687 18.091 6.60391C17.6533 5.55096 17.0104 4.59558 16.2 3.79337ZM10.0367 17.135H10.0333C8.73708 17.1356 7.46434 16.7889 6.3475 16.1309L6.08333 15.9742L3.34167 16.69L4.07417 14.03L3.90167 13.7567C3.17676 12.6091 2.79269 11.2791 2.79417 9.9217C2.79417 5.94837 6.04417 2.71504 10.0392 2.71504C11.9557 2.7115 13.7951 3.46937 15.1528 4.82195C16.5105 6.17454 17.2754 8.01105 17.2792 9.92754C17.2775 13.9017 14.0292 17.1359 10.0375 17.1359L10.0367 17.135ZM14.0092 11.7375C13.7917 11.6292 12.72 11.1042 12.5217 11.0317C12.3233 10.96 12.1767 10.9234 12.0317 11.14C11.8867 11.3575 11.4692 11.8442 11.3425 11.99C11.215 12.1367 11.0883 12.1525 10.8708 12.0442C10.6533 11.9359 9.95083 11.7075 9.11917 10.9692C8.4725 10.3942 8.03583 9.68504 7.90833 9.46837C7.78167 9.25171 7.895 9.13337 8.00417 9.02587C8.10167 8.92837 8.22083 8.77254 8.33083 8.64587C8.43917 8.5192 8.47583 8.4292 8.5475 8.2842C8.62 8.14004 8.58417 8.01337 8.53083 7.90504C8.47583 7.7967 8.04 6.73004 7.85917 6.2967C7.68167 5.87337 7.5025 5.93087 7.36917 5.9242C7.2425 5.91837 7.09583 5.91587 6.95167 5.91587C6.84137 5.91874 6.73285 5.94436 6.63291 5.9911C6.53296 6.03785 6.44374 6.10472 6.37083 6.18754C6.17083 6.4042 5.60917 6.9292 5.60917 7.99587C5.60917 9.06087 6.39 10.0925 6.49833 10.2375C6.60583 10.3817 8.03333 12.57 10.2175 13.5084C10.6225 13.6825 11.0375 13.835 11.4592 13.965C11.98 14.13 12.455 14.1067 12.83 14.0509C13.2483 13.9884 14.1183 13.5259 14.3 13.02C14.4808 12.5142 14.4808 12.0809 14.4267 11.99C14.3725 11.9 14.2267 11.845 14.0092 11.7375Z"
+                  fill="white" />
+            </svg>
+         </a>
+      </div>
+   </div>
+</div>
+
+<div class="modal header-search" id="header-search">
+   <div class="header-search__content modal__wrapper">
+      <div class="header-search__main">
+         <div class="circle modal__close" style="background: #E0E3DE;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M13.7026 11.1446C13.9196 11.6419 13.9049 12.2201 13.6637 12.7239L20 19.0602L19.0602 20L12.7232 13.663C12.2201 13.9031 11.644 13.9161 11.1476 13.6997L4.90529 19.942L4 19.0367L10.2327 12.804C10.0001 12.2998 10.0075 11.7082 10.2533 11.1931L4.02349 4.96329L4.96329 4.02349L11.1924 10.2526C11.7082 10.0056 12.3019 9.99653 12.8069 10.2298L19.0367 4L19.942 4.90529L13.7026 11.1446Z"
+                  fill="#0D332F" />
+            </svg>
+         </div>
+         <h2 class="h2 header-search__title">Поиск по товарам</h2>
+         <div class="header__search">
+            <input type="text" placeholder="Найти в Tropical Star">
+            <button>
+               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M7.33105 1.33301C8.92244 1.33301 10.4489 1.96554 11.5742 3.09082C12.6993 4.21601 13.3319 5.74182 13.332 7.33301C13.332 8.70034 12.8628 10.018 12.0176 11.0762L14.4707 13.5293C14.7308 13.7898 14.731 14.2123 14.4707 14.4727C14.2104 14.733 13.7879 14.7327 13.5273 14.4727L11.0742 12.0195C10.016 12.8648 8.69839 13.334 7.33105 13.334C5.73986 13.3339 4.21405 12.7013 3.08887 11.5762C1.96359 10.4509 1.33105 8.92439 1.33105 7.33301C1.33114 5.74174 1.96366 4.21602 3.08887 3.09082C4.21407 1.96562 5.73979 1.33309 7.33105 1.33301ZM7.33105 2.66699C6.09358 2.66708 4.90726 3.15915 4.03223 4.03418C3.15719 4.90921 2.66513 6.09553 2.66504 7.33301C2.66504 8.5706 3.15712 9.7577 4.03223 10.6328C4.90724 11.5077 6.09366 11.9999 7.33105 12C8.55459 12 9.72747 11.5177 10.5996 10.6611C10.6089 10.6506 10.6169 10.6389 10.627 10.6289C10.637 10.6189 10.6487 10.6108 10.6592 10.6016C11.5157 9.72942 11.998 8.55655 11.998 7.33301C11.998 6.09561 11.5058 4.9092 10.6309 4.03418C9.75575 3.15907 8.56865 2.66699 7.33105 2.66699Z"
+                     fill="#0D332F" />
+               </svg>
+
+            </button>
+         </div>
+      </div>
+      <div class="header-search__suggest" style="display: none;">
+         <a href="#" class="products-section__title h3">
+            Наш выбор
+            <img src="img/icons/arrow-title.svg" alt="">
+         </a>
+         <ul class="header-search__products scrollbar-none">
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+      <div class="header-search__block">
+         <ul class="header-search__sugs">
+            <li class="btn btn--grey">манго</li>
+            <li class="btn btn--grey">мангостин</li>
+            <li class="btn btn--grey">маракуйя</li>
+            <li class="btn btn--grey">мандарины</li>
+         </ul>
+         <div class="header-search__header">
+            <div>
+               <h3 class="h3">Результаты поиска</h3>
+               <span class="regular_14" style="opacity: 0.4;">8 товаров</span>
+            </div>
+            <a href="#" class="btn btn--orange">Смотреть все</a>
+         </div>
+         <ul class="header-search__products scrollbar-none">
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <div class="mobile">
+            <a href="#" class="btn btn--orange" style="--size: 48px;">Смотреть все</a>
+
+         </div>
+      </div>
+      <div class="header-search__empty" style="display: none;">
+         <h3 class="h3">К сожалению, ничего не нашли</h3>
+         <p class="body-text" style="opacity: 0.8;">Пожалуйста, измените запрос или перейдите в каталог</p>
+         <a href="#" class="btn btn--green">В каталог</a>
+      </div>
+   </div>
+</div>
       <main class="main">
 
          <div class="home-page receipts">
@@ -838,6 +1341,9 @@
          </li>
          <li>
             <a href="#">Рецепты</a>
+         </li>
+         <li>
+            <a href="#">Покупателям</a>
          </li>
       </ul>
       <ul class="footer__buttons">

@@ -1276,6 +1276,95 @@
             </div>
          </div>
       </div>
+      <div class="modal auth-modal order-modal" id="auth-modal">
+         <div class="modal__content auth-modal__content order-modal__content">
+            <button class="address-modal__close modal__close btn btn--grey circle">
+               <img src="img/icons/cross.svg" alt="">
+            </button>
+            <div class="order-modal__scrollable scrollbar-none">
+               <h2 class="order-modal__title h2">
+                  Заказ <span style="opacity: 0.4;">№5678</span>
+               </h2>
+               <ul class="order-modal__info">
+                  <li>
+                     <span class="regular_14" style="opacity: 0.8;">Создан</span>
+                     <span class="semibold_12">20 сентября 2025</span>
+                  </li>
+                  <li>
+                     <span class="regular_14" style="opacity: 0.8;">Дата доставки</span>
+                     <span class="semibold_12">2 октября 2025</span>
+                  </li>
+                  <li>
+                     <span class="regular_14" style="opacity: 0.8;">Статус</span>
+                     <div class="order-item__status" style="background-color: #e0e3de; color: #0d332f;">Доставлен
+                     </div>
+                  </li>
+                  <li>
+                     <span class="regular_14" style="opacity: 0.8;">Доставлен по адресу</span>
+                     <span class="semibold_12">Кастанаевская ул, 30к2</span>
+                  </li>
+               </ul>
+               <div class="order-modal__products">
+                  <h4 class="h4">Товары в заказе</h4>
+                  <ul>
+                     <li class="cart-product">
+                        <div class="cart-product__image">
+                           <img src="img/cart1.png" alt="">
+                        </div>
+                        <div class="cart-product__main">
+                           <span class="regular_14">Ананас Пхукет 1 кг</span>
+                           <div class="cart-product__footer">
+                              <span class="medium_14">× 1</span>
+                              <p class="semibold_14"><span style="color: #0D332F;">2000 ₽</span></p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="cart-product">
+                        <div class="cart-product__image">
+                           <img src="img/cart1.png" alt="">
+                        </div>
+                        <div class="cart-product__main">
+                           <span class="regular_14">Ананас Пхукет 1 кг</span>
+                           <div class="cart-product__footer">
+                              <span class="medium_14">× 1</span>
+
+                              <p class="semibold_14"><span style="color: #0D332F;">2000 ₽</span></p>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+               </div>
+               <div class="order-modal__list">
+                  <ul class="home-cart__items">
+                     <li>
+                        <span>Товары</span>
+                        <span>3500 ₽</span>
+                     </li>
+                     <li>
+                        <span>Скидки</span>
+                        <span>-300 ₽</span>
+                     </li>
+                     <li>
+                        <span>Доставка</span>
+                        <span>500 ₽</span>
+                     </li>
+                  </ul>
+                  <div class="home-cart__res">
+                     <p>
+                        <span>К оплате</span>
+                        <span>5700 ₽</span>
+                     </p>
+
+                  </div>
+               </div>
+
+            </div>
+
+            <div class="order-modal__footer product-modal__btn">
+               <button class="btn">Повторить заказ</button>
+            </div>
+         </div>
+      </div>
    </div>
    @@include('components/_scripts.html')
 </body>

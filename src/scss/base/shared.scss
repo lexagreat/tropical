@@ -118,11 +118,18 @@ label {
 .semibold_14 {
    @include semibold_14;
 }
+.medium_16 {
+   @include medium_14;
+   font-size: 16px;
+}
 .medium_14 {
    @include medium_14;
 }
 .regular_14 {
    @include regular_14;
+}
+.regular_12 {
+   @include regular_12;
 }
 .semibold_12 {
    @include semibold_12;
@@ -186,7 +193,7 @@ label {
    }
    &--orange {
       background-color: #ffb12b;
-
+      color: #0d332f;
       @media (hover: hover) {
          &:hover {
             background-color: #feca26;

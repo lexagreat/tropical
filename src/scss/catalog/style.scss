@@ -15,6 +15,8 @@
       white-space: nowrap;
 
       .btn {
+         width: fit-content;
+         padding: 0 18px;
          --size: 56px;
          color: #0d332f;
          &.active {
@@ -51,6 +53,7 @@
 .home-page__main {
    .catalog-page__aside {
       display: none;
+
       @media (max-width: $tablet) {
          display: flex;
       }
@@ -125,5 +128,118 @@
       @media (max-width: $mobile) {
          grid-template-columns: repeat(2, 1fr);
       }
+   }
+}
+.search-page {
+   display: flex;
+   flex-direction: column;
+   padding-top: 48px;
+   gap: 28px;
+   &__empty {
+      .body-text {
+         margin-top: 12px;
+         margin-bottom: 28px;
+      }
+      .btn {
+         width: fit-content;
+         padding: 0 18px;
+         @media (max-width: $mobile) {
+            width: 100%;
+            --size: 48px;
+         }
+      }
+   }
+   @media (max-width: $tablet) {
+      padding-top: 20px;
+   }
+   @media (max-width: $mobile) {
+      padding-top: 8px;
+      gap: 24px;
+      .header__search {
+         input {
+            height: 48px;
+         }
+      }
+   }
+}
+.sale-card {
+   cursor: pointer;
+   .product-card__image {
+      overflow: hidden;
+      img {
+         transition: 0.3s;
+      }
+   }
+   @media (hover: hover) {
+      &:hover {
+         .product-card {
+            &__image {
+               img {
+                  scale: 1.1;
+               }
+            }
+         }
+         .btn.btn--green.circle {
+            background-color: #07201d;
+         }
+      }
+   }
+}
+.sale-modal {
+   .cart-modal__content {
+      display: flex;
+      flex-direction: column;
+      .cart-modal__main {
+         flex: 1;
+         display: flex;
+         flex-direction: column;
+      }
+   }
+   // .sale-modal__content
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin: 0 12px;
+      @media (max-width: $tablet) {
+         margin: 0;
+      }
+   }
+
+   // .sale-modal__main
+
+   &__main {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      flex: 1;
+   }
+
+   // .sale-modal__iamge
+
+   &__iamge {
+      border-radius: 32px;
+      overflow: hidden;
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
+   // .sale-modal__text
+
+   &__text {
+   }
+
+   // .sale-modal__footer
+
+   &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      border-bottom: 1px dashed #0d332f26;
    }
 }

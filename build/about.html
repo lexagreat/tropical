@@ -1,0 +1,2071 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="format-detection" content="telephone=no">
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <link rel="shortcut icon" href="@@favicon.svg" type="image/svg+xml">
+   <link rel="shortcut icon" href="@@favicon.webp" type="image/webp">
+   <link rel="shortcut icon" href="@@favicon.png" type="image/x-icon">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+   <link rel="stylesheet" href="css/style.css">
+   <title>New project</title>
+</head>
+
+<body>
+   <div class="wrapper">
+      <header class="header">
+   <div class="container">
+      <div class="header__wrapper">
+         <div class="header__main">
+            <a href="index.html" class="header__logo">
+               <img src="img/icons/logo.svg" alt="">
+            </a>
+            <div class="header__inputs">
+               <div class="header__search">
+                  <input type="text" placeholder="Найти в Tropical Star">
+                  <button>
+                     <img src="img/icons/search.svg" alt="">
+                  </button>
+               </div>
+               <button class="header__address modal__link" href="#address-modal">
+                  <p>
+                     <img src="img/icons/geo.svg" alt="">
+                     <span>Кастанаевская ул, 30к2</span>
+                  </p>
+                  <img src="img/icons/arrow-right.svg" alt="">
+               </button>
+
+            </div>
+            <ul class="header__links medium_14">
+               <li>
+                  <a href="#" class="header__link">О компании</a>
+               </li>
+               <li>
+                  <a href="#" class="header__link">Рецепты</a>
+               </li>
+               <li>
+                  <a href="#" class="header__link">Контакты</a>
+               </li>
+            </ul>
+         </div>
+         <div class="header__btns">
+            <a href="tel:999999999" class="header__phone btn btn--grey circle">
+               <img src="img/icons/phone.svg" alt="">
+            </a>
+            <a href="#" class="header__user btn btn--green circle">
+               <img src="img/icons/user.svg" alt="">
+            </a>
+            <button class="header__burger btn btn--grey circle modal__link" href="#header-menu-modal">
+               <span></span>
+            </button>
+         </div>
+      </div>
+   </div>
+</header>
+<div class="modal header-menu__modal" id="header-menu-modal">
+   <div class="header-menu__content modal__wrapper scrollbar-none">
+      <div class="header-menu__upper">
+         <ul>
+            <li>
+               <div class="circle" style="background: #FFFFFF1A;">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M7.33105 1.33301C8.92244 1.33301 10.4489 1.96554 11.5742 3.09082C12.6993 4.21601 13.3319 5.74182 13.332 7.33301C13.332 8.70034 12.8628 10.018 12.0176 11.0762L14.4707 13.5293C14.7308 13.7898 14.731 14.2123 14.4707 14.4727C14.2104 14.733 13.7879 14.7327 13.5273 14.4727L11.0742 12.0195C10.016 12.8648 8.69839 13.334 7.33105 13.334C5.73986 13.3339 4.21405 12.7013 3.08887 11.5762C1.96359 10.4509 1.33105 8.92439 1.33105 7.33301C1.33114 5.74174 1.96366 4.21602 3.08887 3.09082C4.21407 1.96562 5.73979 1.33309 7.33105 1.33301ZM7.33105 2.66699C6.09358 2.66708 4.90726 3.15915 4.03223 4.03418C3.15719 4.90921 2.66513 6.09553 2.66504 7.33301C2.66504 8.5706 3.15712 9.7577 4.03223 10.6328C4.90724 11.5077 6.09366 11.9999 7.33105 12C8.55459 12 9.72747 11.5177 10.5996 10.6611C10.6089 10.6506 10.6169 10.6389 10.627 10.6289C10.637 10.6189 10.6487 10.6108 10.6592 10.6016C11.5157 9.72942 11.998 8.55655 11.998 7.33301C11.998 6.09561 11.5058 4.9092 10.6309 4.03418C9.75575 3.15907 8.56865 2.66699 7.33105 2.66699Z"
+                        fill="white" />
+                  </svg>
+               </div>
+            </li>
+            <li>
+               <div class="circle" style="background: #FFFFFF1A;">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M14.3807 0.730791C14.6352 0.610247 14.9383 0.662697 15.1375 0.861651C15.3367 1.06078 15.3898 1.36393 15.2694 1.61849L9.26935 14.2855C9.14881 14.54 8.88062 14.6912 8.60041 14.6634C8.32037 14.6355 8.08762 14.4345 8.01935 14.1615L6.78303 9.21614L1.83771 7.97981C1.56477 7.91137 1.36447 7.67881 1.33674 7.39876C1.30909 7.11863 1.46026 6.8513 1.71467 6.73079L14.3807 0.730791ZM3.9676 7.13802L7.49494 8.01985L7.58185 8.04817C7.77835 8.12715 7.92805 8.29623 7.98029 8.50521L8.86115 12.0306L13.2645 2.7347L3.9676 7.13802Z"
+                        fill="white" />
+                  </svg>
+               </div>
+            </li>
+         </ul>
+         <div class="circle modal__close" style="background: #07201D66;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M13.7026 11.1446C13.9196 11.6419 13.9049 12.2201 13.6637 12.7239L20 19.0602L19.0602 20L12.7232 13.663C12.2201 13.9031 11.644 13.9161 11.1476 13.6997L4.90529 19.942L4 19.0367L10.2327 12.804C10.0001 12.2998 10.0075 11.7082 10.2533 11.1931L4.02349 4.96329L4.96329 4.02349L11.1924 10.2526C11.7082 10.0056 12.3019 9.99653 12.8069 10.2298L19.0367 4L19.942 4.90529L13.7026 11.1446Z"
+                  fill="white" />
+            </svg>
+         </div>
+
+      </div>
+      <ul class="header-menu__links">
+         <li>
+            <button>
+               <span>Фрукты</span>
+               <svg width="28" height="28" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M5.29286 2.25104C5.68335 1.91632 6.31727 1.91632 6.70776 2.25104L12.7071 7.39359C13.0976 7.72831 13.0976 8.27169 12.7071 8.60641L6.70776 13.749C6.31727 14.0837 5.68335 14.0837 5.29286 13.749C4.90238 13.4142 4.90238 12.8709 5.29286 12.5361L10.5848 8L5.29286 3.46386C4.90238 3.12914 4.90238 2.58575 5.29286 2.25104Z"
+                     fill="white" />
+               </svg>
+            </button>
+            <div class="collapse">
+               <ul>
+                  <li><a class="btn" href="#">Все</a></li>
+                  <li><a class="btn" href="#">Тайские</a></li>
+                  <li><a class="btn" href="#">Колумбийские</a></li>
+                  <li><a class="btn" href="#">Вьетнамские</a></li>
+               </ul>
+            </div>
+         </li>
+         <li><a href="#">Овощи</a></li>
+         <li><a href="#">Цветы</a></li>
+         <li><a href="#">Акции</a></li>
+         <li><a href="#">О компании</a></li>
+         <li><a href="#">Рецепты</a></li>
+         <li><a href="#">Контакты</a></li>
+      </ul>
+      <div class="header-menu__footer">
+         <a href="tel:+ 7 (960) 664-43-22" class="btn">
+            + 7 (960) 664-43-22
+         </a>
+         <a href="#" class="circle">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.2 3.79337C15.3911 2.984 14.4301 2.34262 13.3724 1.90612C12.3146 1.46963 11.1809 1.24666 10.0367 1.25004C5.23417 1.25004 1.325 5.14004 1.32333 9.9217C1.32124 11.4444 1.72264 12.9404 2.48667 14.2575L1.25 18.75L5.86917 17.5442C7.14777 18.237 8.5791 18.5996 10.0333 18.5992H10.0367C14.8383 18.5992 18.7475 14.7084 18.75 9.9267C18.7528 8.78637 18.5288 7.65687 18.091 6.60391C17.6533 5.55096 17.0104 4.59558 16.2 3.79337ZM10.0367 17.135H10.0333C8.73708 17.1356 7.46434 16.7889 6.3475 16.1309L6.08333 15.9742L3.34167 16.69L4.07417 14.03L3.90167 13.7567C3.17676 12.6091 2.79269 11.2791 2.79417 9.9217C2.79417 5.94837 6.04417 2.71504 10.0392 2.71504C11.9557 2.7115 13.7951 3.46937 15.1528 4.82195C16.5105 6.17454 17.2754 8.01105 17.2792 9.92754C17.2775 13.9017 14.0292 17.1359 10.0375 17.1359L10.0367 17.135ZM14.0092 11.7375C13.7917 11.6292 12.72 11.1042 12.5217 11.0317C12.3233 10.96 12.1767 10.9234 12.0317 11.14C11.8867 11.3575 11.4692 11.8442 11.3425 11.99C11.215 12.1367 11.0883 12.1525 10.8708 12.0442C10.6533 11.9359 9.95083 11.7075 9.11917 10.9692C8.4725 10.3942 8.03583 9.68504 7.90833 9.46837C7.78167 9.25171 7.895 9.13337 8.00417 9.02587C8.10167 8.92837 8.22083 8.77254 8.33083 8.64587C8.43917 8.5192 8.47583 8.4292 8.5475 8.2842C8.62 8.14004 8.58417 8.01337 8.53083 7.90504C8.47583 7.7967 8.04 6.73004 7.85917 6.2967C7.68167 5.87337 7.5025 5.93087 7.36917 5.9242C7.2425 5.91837 7.09583 5.91587 6.95167 5.91587C6.84137 5.91874 6.73285 5.94436 6.63291 5.9911C6.53296 6.03785 6.44374 6.10472 6.37083 6.18754C6.17083 6.4042 5.60917 6.9292 5.60917 7.99587C5.60917 9.06087 6.39 10.0925 6.49833 10.2375C6.60583 10.3817 8.03333 12.57 10.2175 13.5084C10.6225 13.6825 11.0375 13.835 11.4592 13.965C11.98 14.13 12.455 14.1067 12.83 14.0509C13.2483 13.9884 14.1183 13.5259 14.3 13.02C14.4808 12.5142 14.4808 12.0809 14.4267 11.99C14.3725 11.9 14.2267 11.845 14.0092 11.7375Z"
+                  fill="white" />
+            </svg>
+         </a>
+      </div>
+   </div>
+</div>
+
+<div class="modal header-search" id="header-search">
+   <div class="header-search__content modal__wrapper">
+      <div class="header-search__main">
+         <div class="circle modal__close" style="background: #E0E3DE;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+               <path
+                  d="M13.7026 11.1446C13.9196 11.6419 13.9049 12.2201 13.6637 12.7239L20 19.0602L19.0602 20L12.7232 13.663C12.2201 13.9031 11.644 13.9161 11.1476 13.6997L4.90529 19.942L4 19.0367L10.2327 12.804C10.0001 12.2998 10.0075 11.7082 10.2533 11.1931L4.02349 4.96329L4.96329 4.02349L11.1924 10.2526C11.7082 10.0056 12.3019 9.99653 12.8069 10.2298L19.0367 4L19.942 4.90529L13.7026 11.1446Z"
+                  fill="#0D332F" />
+            </svg>
+         </div>
+         <h2 class="h2 header-search__title">Поиск по товарам</h2>
+         <div class="header__search">
+            <input type="text" placeholder="Найти в Tropical Star">
+            <button>
+               <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M7.33105 1.33301C8.92244 1.33301 10.4489 1.96554 11.5742 3.09082C12.6993 4.21601 13.3319 5.74182 13.332 7.33301C13.332 8.70034 12.8628 10.018 12.0176 11.0762L14.4707 13.5293C14.7308 13.7898 14.731 14.2123 14.4707 14.4727C14.2104 14.733 13.7879 14.7327 13.5273 14.4727L11.0742 12.0195C10.016 12.8648 8.69839 13.334 7.33105 13.334C5.73986 13.3339 4.21405 12.7013 3.08887 11.5762C1.96359 10.4509 1.33105 8.92439 1.33105 7.33301C1.33114 5.74174 1.96366 4.21602 3.08887 3.09082C4.21407 1.96562 5.73979 1.33309 7.33105 1.33301ZM7.33105 2.66699C6.09358 2.66708 4.90726 3.15915 4.03223 4.03418C3.15719 4.90921 2.66513 6.09553 2.66504 7.33301C2.66504 8.5706 3.15712 9.7577 4.03223 10.6328C4.90724 11.5077 6.09366 11.9999 7.33105 12C8.55459 12 9.72747 11.5177 10.5996 10.6611C10.6089 10.6506 10.6169 10.6389 10.627 10.6289C10.637 10.6189 10.6487 10.6108 10.6592 10.6016C11.5157 9.72942 11.998 8.55655 11.998 7.33301C11.998 6.09561 11.5058 4.9092 10.6309 4.03418C9.75575 3.15907 8.56865 2.66699 7.33105 2.66699Z"
+                     fill="#0D332F" />
+               </svg>
+
+            </button>
+         </div>
+      </div>
+      <div class="header-search__suggest" style="display: none;">
+         <a href="#" class="products-section__title h3">
+            Наш выбор
+            <img src="img/icons/arrow-title.svg" alt="">
+         </a>
+         <ul class="header-search__products scrollbar-none">
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+      <div class="header-search__block">
+         <ul class="header-search__sugs">
+            <li class="btn btn--grey">манго</li>
+            <li class="btn btn--grey">мангостин</li>
+            <li class="btn btn--grey">маракуйя</li>
+            <li class="btn btn--grey">мандарины</li>
+         </ul>
+         <div class="header-search__header">
+            <div>
+               <h3 class="h3">Результаты поиска</h3>
+               <span class="regular_14" style="opacity: 0.4;">8 товаров</span>
+            </div>
+            <a href="#" class="btn btn--orange">Смотреть все</a>
+         </div>
+         <ul class="header-search__products scrollbar-none">
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+            <li>
+               <div class="product-card">
+                  <div class="product-card__image">
+                     <img src="img/product.png" alt="">
+                     <ul class="product-card__tags semibold_12">
+                        <li class="blur">
+                           новинка
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="product-card__main">
+                     <span class="price product-card__price">1650 ₽</span>
+                     <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                  </div>
+                  <div class="product-card__footer">
+                     <div class="product-card__count">
+                        <button class="btn btn--grey circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                           </svg>
+
+                        </button>
+                        <input type="text" value="1">
+                        <button class="btn btn--green circle">
+                           <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                 d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                 fill="white" />
+                           </svg>
+
+                        </button>
+                     </div>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <div class="mobile">
+            <a href="#" class="btn btn--orange" style="--size: 48px;">Смотреть все</a>
+
+         </div>
+      </div>
+      <div class="header-search__empty" style="display: none;">
+         <h3 class="h3">К сожалению, ничего не нашли</h3>
+         <p class="body-text" style="opacity: 0.8;">Пожалуйста, измените запрос или перейдите в каталог</p>
+         <a href="#" class="btn btn--green">В каталог</a>
+      </div>
+   </div>
+</div>
+      <main class="main about-page">
+         <section class="about-hero">
+            <div class="container">
+               <div class="about-hero__wrapper">
+                  <div class="about-hero__main">
+                     <h2 class="h1">
+                        <img src="img/about/hero-title.svg" alt="">
+                     </h2>
+                     <div class="about-hero__footer">
+                        <p class="body-text">
+                           Доставим прямо к вашей двери самое яркое и сочное, что создала природа Юго-Восточной Азии
+                           и Латинской Америки.
+                        </p>
+                        <a href="#" class="btn btn--green">В каталог</a>
+                     </div>
+                  </div>
+                  <div class="about-hero__gallery">
+                     <div class="about-hero__image">
+                        <img src="img/about/hero1.png" alt="">
+                     </div>
+                     <div class="about-hero__image">
+                        <img src="img/about/hero2.png" alt="">
+                     </div>
+                     <div class="about-hero__image">
+                        <img src="img/about/hero3.png" alt="">
+                     </div>
+                     <div class="about-hero__image">
+                        <img src="img/about/hero4.png" alt="">
+                     </div>
+                     <div class="about-hero__image last">
+                        <img src="img/about/hero5.png" alt="">
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="about-cifra">
+            <div class="container">
+               <div class="about-cifra__wrapper">
+                  <h2 class="h2 about-cifra__title home-about__title">
+                     Мы — Tropical Star, работаем только с проверенными фермерами, чтобы гарантировать вам безупречное
+                     качество, спелость и насыщенный вкус в каждой поставке
+                  </h2>
+                  <div class="home-hero__navigation">
+                     <div class="circle btn prev" style="rotate: 180deg;">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M5.29286 2.25104C5.68335 1.91632 6.31727 1.91632 6.70776 2.25104L12.7071 7.39359C13.0976 7.72831 13.0976 8.27169 12.7071 8.60641L6.70776 13.749C6.31727 14.0837 5.68335 14.0837 5.29286 13.749C4.90238 13.4142 4.90238 12.8709 5.29286 12.5361L10.5848 8L5.29286 3.46386C4.90238 3.12914 4.90238 2.58575 5.29286 2.25104Z"
+                              fill="white" />
+                        </svg>
+
+                     </div>
+                     <div class="circle btn next">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M5.29286 2.25104C5.68335 1.91632 6.31727 1.91632 6.70776 2.25104L12.7071 7.39359C13.0976 7.72831 13.0976 8.27169 12.7071 8.60641L6.70776 13.749C6.31727 14.0837 5.68335 14.0837 5.29286 13.749C4.90238 13.4142 4.90238 12.8709 5.29286 12.5361L10.5848 8L5.29286 3.46386C4.90238 3.12914 4.90238 2.58575 5.29286 2.25104Z"
+                              fill="white" />
+                        </svg>
+
+                     </div>
+                  </div>
+                  <div class="about-cifra__main">
+                     <h3 class="about-cifra__subtitle">
+                        О компании <br> в цифрах
+                     </h3>
+
+                     <div class="swiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide">
+                              <img src="img/about/cifra-slide1.png" alt="">
+                              <div class="about-cifra__text">
+                                 <span>108 </span>
+                                 <p class="body-text" style="color: #FFB12B;">
+                                    тонн фруктов <br> в среднем <br> поставляем в год
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/about/cifra-slide1.png" alt="">
+                              <div class="about-cifra__text">
+                                 <span>108 </span>
+                                 <p class="body-text" style="color: #FFB12B;">
+                                    тонн фруктов <br> в среднем <br> поставляем в год
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/about/cifra-slide1.png" alt="">
+                              <div class="about-cifra__text">
+                                 <span>108 </span>
+                                 <p class="body-text" style="color: #FFB12B;">
+                                    тонн фруктов <br> в среднем <br> поставляем в год
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/about/cifra-slide1.png" alt="">
+                              <div class="about-cifra__text">
+                                 <span>108 </span>
+                                 <p class="body-text" style="color: #FFB12B;">
+                                    тонн фруктов <br> в среднем <br> поставляем в год
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/about/cifra-slide1.png" alt="">
+                              <div class="about-cifra__text">
+                                 <span>108 </span>
+                                 <p class="body-text" style="color: #FFB12B;">
+                                    тонн фруктов <br> в среднем <br> поставляем в год
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/about/cifra-slide1.png" alt="">
+                              <div class="about-cifra__text">
+                                 <span>108 </span>
+                                 <p class="body-text" style="color: #FFB12B;">
+                                    тонн фруктов <br> в среднем <br> поставляем в год
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/about/cifra-slide1.png" alt="">
+                              <div class="about-cifra__text">
+                                 <span>108 </span>
+                                 <p class="body-text" style="color: #FFB12B;">
+                                    тонн фруктов <br> в среднем <br> поставляем в год
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/about/cifra-slide1.png" alt="">
+                              <div class="about-cifra__text">
+                                 <span>108 </span>
+                                 <p class="body-text" style="color: #FFB12B;">
+                                    тонн фруктов <br> в среднем <br> поставляем в год
+                                 </p>
+                              </div>
+                           </div>
+                           <div class="swiper-slide">
+                              <img src="img/about/cifra-slide1.png" alt="">
+                              <div class="about-cifra__text">
+                                 <span>108 </span>
+                                 <p class="body-text" style="color: #FFB12B;">
+                                    тонн фруктов <br> в среднем <br> поставляем в год
+                                 </p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="about-geo">
+            <div class="container">
+               <div class="about-geo__wrapper">
+                  <div class="about-geo__main">
+                     <h2 class="about-geo__title h2">География сбора урожая</h2>
+                     <div class="about-geo__slider geo-slide">
+                        <div class="swiper">
+                           <div class="swiper-wrapper">
+                              <div class="swiper-slide">
+                                 <div class="geo-slide__header">
+                                    <div class="geo-slide__image">
+                                       <img src="img/about/geo-slide.png" alt="">
+                                    </div>
+                                    <div class="geo-slide__info">
+                                       <p>Провинция Чиангмай, <br> север Таиланда </p>
+                                       <span class="regular_14" style="opacity: 0.4;">Урожай манго</span>
+                                    </div>
+                                 </div>
+                                 <div class="geo-slide__text body-text" style="opacity: 0.8;">
+                                    Ароматные манго в вашем заказе родом из этого региона. Он славится своими идеальными
+                                    условиями для выращивания: прохладные ночи и жаркие дни позволяют фруктам накопить
+                                    больше сахара и приобрести тот самый, эталонный вкус.
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="geo-slide__header">
+                                    <div class="geo-slide__image">
+                                       <img src="img/about/geo-slide.png" alt="">
+                                    </div>
+                                    <div class="geo-slide__info">
+                                       <p>Провинция Чиангмай, <br> север Таиланда </p>
+                                       <span class="regular_14" style="opacity: 0.4;">Урожай манго</span>
+                                    </div>
+                                 </div>
+                                 <div class="geo-slide__text body-text" style="opacity: 0.8;">
+                                    Ароматные манго в вашем заказе родом из этого региона. Он славится своими идеальными
+                                    условиями для выращивания: прохладные ночи и жаркие дни позволяют фруктам накопить
+                                    больше сахара и приобрести тот самый, эталонный вкус.
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="geo-slide__header">
+                                    <div class="geo-slide__image">
+                                       <img src="img/about/geo-slide.png" alt="">
+                                    </div>
+                                    <div class="geo-slide__info">
+                                       <p>Провинция Чиангмай, <br> север Таиланда </p>
+                                       <span class="regular_14" style="opacity: 0.4;">Урожай манго</span>
+                                    </div>
+                                 </div>
+                                 <div class="geo-slide__text body-text" style="opacity: 0.8;">
+                                    Ароматные манго в вашем заказе родом из этого региона. Он славится своими идеальными
+                                    условиями для выращивания: прохладные ночи и жаркие дни позволяют фруктам накопить
+                                    больше сахара и приобрести тот самый, эталонный вкус.
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="geo-slide__header">
+                                    <div class="geo-slide__image">
+                                       <img src="img/about/geo-slide.png" alt="">
+                                    </div>
+                                    <div class="geo-slide__info">
+                                       <p>Провинция Чиангмай, <br> север Таиланда </p>
+                                       <span class="regular_14" style="opacity: 0.4;">Урожай манго</span>
+                                    </div>
+                                 </div>
+                                 <div class="geo-slide__text body-text" style="opacity: 0.8;">
+                                    Ароматные манго в вашем заказе родом из этого региона. Он славится своими идеальными
+                                    условиями для выращивания: прохладные ночи и жаркие дни позволяют фруктам накопить
+                                    больше сахара и приобрести тот самый, эталонный вкус.
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="geo-slide__header">
+                                    <div class="geo-slide__image">
+                                       <img src="img/about/geo-slide.png" alt="">
+                                    </div>
+                                    <div class="geo-slide__info">
+                                       <p>Провинция Чиангмай, <br> север Таиланда </p>
+                                       <span class="regular_14" style="opacity: 0.4;">Урожай манго</span>
+                                    </div>
+                                 </div>
+                                 <div class="geo-slide__text body-text" style="opacity: 0.8;">
+                                    Ароматные манго в вашем заказе родом из этого региона. Он славится своими идеальными
+                                    условиями для выращивания: прохладные ночи и жаркие дни позволяют фруктам накопить
+                                    больше сахара и приобрести тот самый, эталонный вкус.
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="geo-slide__header">
+                                    <div class="geo-slide__image">
+                                       <img src="img/about/geo-slide.png" alt="">
+                                    </div>
+                                    <div class="geo-slide__info">
+                                       <p>Провинция Чиангмай, <br> север Таиланда </p>
+                                       <span class="regular_14" style="opacity: 0.4;">Урожай манго</span>
+                                    </div>
+                                 </div>
+                                 <div class="geo-slide__text body-text" style="opacity: 0.8;">
+                                    Ароматные манго в вашем заказе родом из этого региона. Он славится своими идеальными
+                                    условиями для выращивания: прохладные ночи и жаркие дни позволяют фруктам накопить
+                                    больше сахара и приобрести тот самый, эталонный вкус.
+                                 </div>
+                              </div>
+                              <div class="swiper-slide">
+                                 <div class="geo-slide__header">
+                                    <div class="geo-slide__image">
+                                       <img src="img/about/geo-slide.png" alt="">
+                                    </div>
+                                    <div class="geo-slide__info">
+                                       <p>Провинция Чиангмай, <br> север Таиланда </p>
+                                       <span class="regular_14" style="opacity: 0.4;">Урожай манго</span>
+                                    </div>
+                                 </div>
+                                 <div class="geo-slide__text body-text" style="opacity: 0.8;">
+                                    Ароматные манго в вашем заказе родом из этого региона. Он славится своими идеальными
+                                    условиями для выращивания: прохладные ночи и жаркие дни позволяют фруктам накопить
+                                    больше сахара и приобрести тот самый, эталонный вкус.
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="about-geo__nav">
+                           <div class="about-geo__pagination"></div>
+                           <div class="about-geo__btns">
+                              <button class="circle prev">
+                                 <svg style="rotate: 180deg;" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M5.29286 2.25104C5.68335 1.91632 6.31727 1.91632 6.70776 2.25104L12.7071 7.39359C13.0976 7.72831 13.0976 8.27169 12.7071 8.60641L6.70776 13.749C6.31727 14.0837 5.68335 14.0837 5.29286 13.749C4.90238 13.4142 4.90238 12.8709 5.29286 12.5361L10.5848 8L5.29286 3.46386C4.90238 3.12914 4.90238 2.58575 5.29286 2.25104Z"
+                                       fill="#0D332F" />
+                                 </svg>
+
+                              </button>
+                              <button class="circle next">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M5.29286 2.25104C5.68335 1.91632 6.31727 1.91632 6.70776 2.25104L12.7071 7.39359C13.0976 7.72831 13.0976 8.27169 12.7071 8.60641L6.70776 13.749C6.31727 14.0837 5.68335 14.0837 5.29286 13.749C4.90238 13.4142 4.90238 12.8709 5.29286 12.5361L10.5848 8L5.29286 3.46386C4.90238 3.12914 4.90238 2.58575 5.29286 2.25104Z"
+                                       fill="#0D332F" />
+                                 </svg>
+
+                              </button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="about-geo__map">
+                     <img class="pc" src="img/about/map.svg" alt="">
+                     <img class="tablet" src="img/about/map-tablet.svg" alt="">
+                     <img class="mobile" src="img/about/map-mobile.svg" alt="">
+                     <div class="about-geo__dot circle" style="--x: 40;--y: 330;"></div>
+                     <div class="about-geo__dot circle" style="--x: 53;--y: 323;"></div>
+                     <div class="about-geo__dot circle" style="--x: 66;--y: 337;"></div>
+                     <div class="about-geo__dot circle" style="--x: 784;--y: 274;"></div>
+                     <div class="about-geo__dot circle" style="--x: 803;--y: 274;"></div>
+                     <div class="about-geo__dot circle" style="--x: 800;--y: 282;"></div>
+                     <div class="about-geo__dot circle" style="--x: 800;--y: 303;"></div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="about-reviews">
+            <div class="container">
+               <div class="about-reviews__wrapper">
+                  <div class="about-reviews__header">
+                     <h2 class="h2 about-reviews__title">
+                        Отзывы наших <br> клиентов
+                     </h2>
+                     <div class="about-geo__nav">
+                        <div class="about-geo__pagination"></div>
+                        <div class="about-geo__btns">
+                           <button class="circle prev">
+                              <svg style="rotate: 180deg;" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M5.29286 2.25104C5.68335 1.91632 6.31727 1.91632 6.70776 2.25104L12.7071 7.39359C13.0976 7.72831 13.0976 8.27169 12.7071 8.60641L6.70776 13.749C6.31727 14.0837 5.68335 14.0837 5.29286 13.749C4.90238 13.4142 4.90238 12.8709 5.29286 12.5361L10.5848 8L5.29286 3.46386C4.90238 3.12914 4.90238 2.58575 5.29286 2.25104Z"
+                                    fill="#0D332F" />
+                              </svg>
+
+                           </button>
+                           <button class="circle next">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                 xmlns="http://www.w3.org/2000/svg">
+                                 <path
+                                    d="M5.29286 2.25104C5.68335 1.91632 6.31727 1.91632 6.70776 2.25104L12.7071 7.39359C13.0976 7.72831 13.0976 8.27169 12.7071 8.60641L6.70776 13.749C6.31727 14.0837 5.68335 14.0837 5.29286 13.749C4.90238 13.4142 4.90238 12.8709 5.29286 12.5361L10.5848 8L5.29286 3.46386C4.90238 3.12914 4.90238 2.58575 5.29286 2.25104Z"
+                                    fill="#0D332F" />
+                              </svg>
+
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="about-reviews__main">
+                     <div class="swiper">
+                        <div class="swiper-wrapper">
+                           <div class="swiper-slide about-review" style="--color: #fff;background-color: #FF6D2A;">
+                              <div class="about-review__main">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M14.696 2.10967L14.384 4.34167C13.696 4.29367 13.16 4.42167 12.776 4.72567C12.392 5.02967 12.136 5.45367 12.008 5.99767C11.88 6.54167 11.856 7.15767 11.936 7.84567H14.696V13.6297H9.392V7.36567C9.392 5.47767 9.84 4.05367 10.736 3.09367C11.648 2.13367 12.968 1.80567 14.696 2.10967ZM7.304 2.10967L6.992 4.34167C6.304 4.29367 5.768 4.42167 5.384 4.72567C5 5.02967 4.744 5.45367 4.616 5.99767C4.488 6.54167 4.464 7.15767 4.544 7.84567H7.304V13.6297H2V7.36567C2 5.47767 2.448 4.05367 3.344 3.09367C4.256 2.13367 5.576 1.80567 7.304 2.10967Z"
+                                       fill="white" />
+                                 </svg>
+                                 <p class="h3">
+                                    Как специалист, который работает с поставщиками ежедневно, хочу отметить безупречный
+                                    профессионализм этой компании. Мы искали надежного партнера для поставки свежих
+                                    тайских личи и вьетнамских драгонфрутов для нашего нового сезонного меню. Результат
+                                    превзошел ожидания.</p>
+                              </div>
+                              <div class="about-review__footer">
+                                 <div class="about-review__author">
+                                    <div class="circle h3">
+                                       A
+                                    </div>
+                                    <div>
+                                       <span class="medium_14">Артем Соколов</span>
+                                       <p class="regular_14">Менеджер по закупкам сети ресторанов «Pan-Asia»</p>
+                                    </div>
+                                 </div>
+                                 <a href="#" target="_blank" class="about-review__link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M20.5303 19.5H19.1309V7.69238C18.9173 7.70936 18.7009 7.69855 18.4883 7.6543C18.3376 7.62293 18.1926 7.57475 18.0537 7.51465L5.52637 20.042L5.03125 19.5469L4.53613 19.0527L17.0127 6.57617C16.836 6.25407 16.748 5.89088 16.7598 5.52246C16.7605 5.49827 16.764 5.47428 16.7656 5.4502H5.03125V4.0498H20.5303V19.5Z"
+                                          fill="transparent" />
+                                    </svg>
+
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="swiper-slide about-review" style="--color: #fff;background-color: #0D332F;">
+                              <div class="about-review__main">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M14.696 2.10967L14.384 4.34167C13.696 4.29367 13.16 4.42167 12.776 4.72567C12.392 5.02967 12.136 5.45367 12.008 5.99767C11.88 6.54167 11.856 7.15767 11.936 7.84567H14.696V13.6297H9.392V7.36567C9.392 5.47767 9.84 4.05367 10.736 3.09367C11.648 2.13367 12.968 1.80567 14.696 2.10967ZM7.304 2.10967L6.992 4.34167C6.304 4.29367 5.768 4.42167 5.384 4.72567C5 5.02967 4.744 5.45367 4.616 5.99767C4.488 6.54167 4.464 7.15767 4.544 7.84567H7.304V13.6297H2V7.36567C2 5.47767 2.448 4.05367 3.344 3.09367C4.256 2.13367 5.576 1.80567 7.304 2.10967Z"
+                                       fill="white" />
+                                 </svg>
+                                 <p class="h3">
+                                    Как специалист, который работает с поставщиками ежедневно, хочу отметить безупречный
+                                    профессионализм этой компании. Мы искали надежного партнера для поставки свежих
+                                    тайских личи и вьетнамских драгонфрутов для нашего нового сезонного меню. Результат
+                                    превзошел ожидания.</p>
+                              </div>
+                              <div class="about-review__footer">
+                                 <div class="about-review__author">
+                                    <div class="circle h3">
+                                       A
+                                    </div>
+                                    <div>
+                                       <span class="medium_14">Артем Соколов</span>
+                                       <p class="regular_14">Менеджер по закупкам сети ресторанов «Pan-Asia»</p>
+                                    </div>
+                                 </div>
+                                 <a href="#" target="_blank" class="about-review__link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M20.5303 19.5H19.1309V7.69238C18.9173 7.70936 18.7009 7.69855 18.4883 7.6543C18.3376 7.62293 18.1926 7.57475 18.0537 7.51465L5.52637 20.042L5.03125 19.5469L4.53613 19.0527L17.0127 6.57617C16.836 6.25407 16.748 5.89088 16.7598 5.52246C16.7605 5.49827 16.764 5.47428 16.7656 5.4502H5.03125V4.0498H20.5303V19.5Z"
+                                          fill="transparent" />
+                                    </svg>
+
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="swiper-slide about-review" style="--color: #0D332F;background-color: #FFB12B;">
+                              <div class="about-review__main">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M14.696 2.10967L14.384 4.34167C13.696 4.29367 13.16 4.42167 12.776 4.72567C12.392 5.02967 12.136 5.45367 12.008 5.99767C11.88 6.54167 11.856 7.15767 11.936 7.84567H14.696V13.6297H9.392V7.36567C9.392 5.47767 9.84 4.05367 10.736 3.09367C11.648 2.13367 12.968 1.80567 14.696 2.10967ZM7.304 2.10967L6.992 4.34167C6.304 4.29367 5.768 4.42167 5.384 4.72567C5 5.02967 4.744 5.45367 4.616 5.99767C4.488 6.54167 4.464 7.15767 4.544 7.84567H7.304V13.6297H2V7.36567C2 5.47767 2.448 4.05367 3.344 3.09367C4.256 2.13367 5.576 1.80567 7.304 2.10967Z"
+                                       fill="white" />
+                                 </svg>
+                                 <p class="h3">
+                                    Как специалист, который работает с поставщиками ежедневно, хочу отметить безупречный
+                                    профессионализм этой компании. Мы искали надежного партнера для поставки свежих
+                                    тайских личи и вьетнамских драгонфрутов для нашего нового сезонного меню. Результат
+                                    превзошел ожидания.</p>
+                              </div>
+                              <div class="about-review__footer">
+                                 <div class="about-review__author">
+                                    <div class="circle h3">
+                                       A
+                                    </div>
+                                    <div>
+                                       <span class="medium_14">Артем Соколов</span>
+                                       <p class="regular_14">Менеджер по закупкам сети ресторанов «Pan-Asia»</p>
+                                    </div>
+                                 </div>
+                                 <a href="#" target="_blank" class="about-review__link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M20.5303 19.5H19.1309V7.69238C18.9173 7.70936 18.7009 7.69855 18.4883 7.6543C18.3376 7.62293 18.1926 7.57475 18.0537 7.51465L5.52637 20.042L5.03125 19.5469L4.53613 19.0527L17.0127 6.57617C16.836 6.25407 16.748 5.89088 16.7598 5.52246C16.7605 5.49827 16.764 5.47428 16.7656 5.4502H5.03125V4.0498H20.5303V19.5Z"
+                                          fill="transparent" />
+                                    </svg>
+
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="swiper-slide about-review" style="--color: #fff;background-color: #FF6D2A;">
+                              <div class="about-review__main">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M14.696 2.10967L14.384 4.34167C13.696 4.29367 13.16 4.42167 12.776 4.72567C12.392 5.02967 12.136 5.45367 12.008 5.99767C11.88 6.54167 11.856 7.15767 11.936 7.84567H14.696V13.6297H9.392V7.36567C9.392 5.47767 9.84 4.05367 10.736 3.09367C11.648 2.13367 12.968 1.80567 14.696 2.10967ZM7.304 2.10967L6.992 4.34167C6.304 4.29367 5.768 4.42167 5.384 4.72567C5 5.02967 4.744 5.45367 4.616 5.99767C4.488 6.54167 4.464 7.15767 4.544 7.84567H7.304V13.6297H2V7.36567C2 5.47767 2.448 4.05367 3.344 3.09367C4.256 2.13367 5.576 1.80567 7.304 2.10967Z"
+                                       fill="white" />
+                                 </svg>
+                                 <p class="h3">
+                                    Как специалист, который работает с поставщиками ежедневно, хочу отметить безупречный
+                                    профессионализм этой компании. Мы искали надежного партнера для поставки свежих
+                                    тайских личи и вьетнамских драгонфрутов для нашего нового сезонного меню. Результат
+                                    превзошел ожидания.</p>
+                              </div>
+                              <div class="about-review__footer">
+                                 <div class="about-review__author">
+                                    <div class="circle h3">
+                                       A
+                                    </div>
+                                    <div>
+                                       <span class="medium_14">Артем Соколов</span>
+                                       <p class="regular_14">Менеджер по закупкам сети ресторанов «Pan-Asia»</p>
+                                    </div>
+                                 </div>
+                                 <a href="#" target="_blank" class="about-review__link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M20.5303 19.5H19.1309V7.69238C18.9173 7.70936 18.7009 7.69855 18.4883 7.6543C18.3376 7.62293 18.1926 7.57475 18.0537 7.51465L5.52637 20.042L5.03125 19.5469L4.53613 19.0527L17.0127 6.57617C16.836 6.25407 16.748 5.89088 16.7598 5.52246C16.7605 5.49827 16.764 5.47428 16.7656 5.4502H5.03125V4.0498H20.5303V19.5Z"
+                                          fill="transparent" />
+                                    </svg>
+
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="swiper-slide about-review" style="--color: #fff;background-color: #0D332F;">
+                              <div class="about-review__main">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M14.696 2.10967L14.384 4.34167C13.696 4.29367 13.16 4.42167 12.776 4.72567C12.392 5.02967 12.136 5.45367 12.008 5.99767C11.88 6.54167 11.856 7.15767 11.936 7.84567H14.696V13.6297H9.392V7.36567C9.392 5.47767 9.84 4.05367 10.736 3.09367C11.648 2.13367 12.968 1.80567 14.696 2.10967ZM7.304 2.10967L6.992 4.34167C6.304 4.29367 5.768 4.42167 5.384 4.72567C5 5.02967 4.744 5.45367 4.616 5.99767C4.488 6.54167 4.464 7.15767 4.544 7.84567H7.304V13.6297H2V7.36567C2 5.47767 2.448 4.05367 3.344 3.09367C4.256 2.13367 5.576 1.80567 7.304 2.10967Z"
+                                       fill="white" />
+                                 </svg>
+                                 <p class="h3">
+                                    Как специалист, который работает с поставщиками ежедневно, хочу отметить безупречный
+                                    профессионализм этой компании. Мы искали надежного партнера для поставки свежих
+                                    тайских личи и вьетнамских драгонфрутов для нашего нового сезонного меню. Результат
+                                    превзошел ожидания.</p>
+                              </div>
+                              <div class="about-review__footer">
+                                 <div class="about-review__author">
+                                    <div class="circle h3">
+                                       A
+                                    </div>
+                                    <div>
+                                       <span class="medium_14">Артем Соколов</span>
+                                       <p class="regular_14">Менеджер по закупкам сети ресторанов «Pan-Asia»</p>
+                                    </div>
+                                 </div>
+                                 <a href="#" target="_blank" class="about-review__link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M20.5303 19.5H19.1309V7.69238C18.9173 7.70936 18.7009 7.69855 18.4883 7.6543C18.3376 7.62293 18.1926 7.57475 18.0537 7.51465L5.52637 20.042L5.03125 19.5469L4.53613 19.0527L17.0127 6.57617C16.836 6.25407 16.748 5.89088 16.7598 5.52246C16.7605 5.49827 16.764 5.47428 16.7656 5.4502H5.03125V4.0498H20.5303V19.5Z"
+                                          fill="transparent" />
+                                    </svg>
+
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="swiper-slide about-review" style="--color: #0D332F;background-color: #FFB12B;">
+                              <div class="about-review__main">
+                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                       d="M14.696 2.10967L14.384 4.34167C13.696 4.29367 13.16 4.42167 12.776 4.72567C12.392 5.02967 12.136 5.45367 12.008 5.99767C11.88 6.54167 11.856 7.15767 11.936 7.84567H14.696V13.6297H9.392V7.36567C9.392 5.47767 9.84 4.05367 10.736 3.09367C11.648 2.13367 12.968 1.80567 14.696 2.10967ZM7.304 2.10967L6.992 4.34167C6.304 4.29367 5.768 4.42167 5.384 4.72567C5 5.02967 4.744 5.45367 4.616 5.99767C4.488 6.54167 4.464 7.15767 4.544 7.84567H7.304V13.6297H2V7.36567C2 5.47767 2.448 4.05367 3.344 3.09367C4.256 2.13367 5.576 1.80567 7.304 2.10967Z"
+                                       fill="white" />
+                                 </svg>
+                                 <p class="h3">
+                                    Как специалист, который работает с поставщиками ежедневно, хочу отметить безупречный
+                                    профессионализм этой компании. Мы искали надежного партнера для поставки свежих
+                                    тайских личи и вьетнамских драгонфрутов для нашего нового сезонного меню. Результат
+                                    превзошел ожидания.</p>
+                              </div>
+                              <div class="about-review__footer">
+                                 <div class="about-review__author">
+                                    <div class="circle h3">
+                                       A
+                                    </div>
+                                    <div>
+                                       <span class="medium_14">Артем Соколов</span>
+                                       <p class="regular_14">Менеджер по закупкам сети ресторанов «Pan-Asia»</p>
+                                    </div>
+                                 </div>
+                                 <a href="#" target="_blank" class="about-review__link">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                       xmlns="http://www.w3.org/2000/svg">
+                                       <path
+                                          d="M20.5303 19.5H19.1309V7.69238C18.9173 7.70936 18.7009 7.69855 18.4883 7.6543C18.3376 7.62293 18.1926 7.57475 18.0537 7.51465L5.52637 20.042L5.03125 19.5469L4.53613 19.0527L17.0127 6.57617C16.836 6.25407 16.748 5.89088 16.7598 5.52246C16.7605 5.49827 16.764 5.47428 16.7656 5.4502H5.03125V4.0498H20.5303V19.5Z"
+                                          fill="transparent" />
+                                    </svg>
+
+                                 </a>
+                              </div>
+                           </div>
+
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <section class="about-label">
+
+            <div class="about-label__wrapper">
+               <div class="about-label__inner">
+                  <div class="about-label__title">
+                     <p style="color: #0D332F;">Новый вкус</p>
+                     <div class="about-label__image">
+                        <img src="img/about/label.png" alt="">
+                        <a href="#" class="btn btn--orange">
+                           В каталог
+                        </a>
+                     </div>
+                     <p style="color: #FFB12B;"> С нашей <br> доставкой</p>
+
+                  </div>
+               </div>
+            </div>
+         </section>
+         <div class="about-footer">
+            <div class="container">
+               <footer class="footer">
+   <div class="footer__upper">
+      <ul class="footer__links h3">
+         <li>
+            <a href="#">О компании</a>
+         </li>
+         <li>
+            <a href="#">Акции</a>
+         </li>
+         <li>
+            <a href="#">Контакты</a>
+         </li>
+         <li>
+            <a href="#">Рецепты</a>
+         </li>
+         <li>
+            <a href="#">Покупателям</a>
+         </li>
+      </ul>
+      <ul class="footer__buttons">
+         <li>
+            <a href="tel:+ 7 (960) 664-43-22" class="btn">+ 7 (960) 664-43-22</a>
+         </li>
+         <li>
+            <a href="#" class="btn btn--green circle">
+               <img src="img/icons/whatsapp.svg" alt="">
+            </a>
+         </li>
+      </ul>
+   </div>
+   <div class="footer__down">
+      <a class="medium_12" href="#">Политика обработки <br> персональных данных</a>
+      <a class="medium_12" href="#">Обработка <br> персональных данных</a>
+      <span>Made by <a href="#" target="_blank">OKTTA</a></span>
+   </div>
+</footer>
+            </div>
+         </div>
+         <a href="#cart-modal" class="modal__link cart-btn btn">
+            <img src="img/icons/cart-mobile.svg" alt="">
+            <span>5700 ₽</span>
+         </a>
+      </main>
+
+      <div class="modal product-modal" id="product-modal">
+         <div class="modal__content product-modal__content">
+            <button class="product-modal__close modal__close btn btn--grey circle">
+               <img src="img/icons/cross.svg" alt="">
+            </button>
+            <div class="product-modal__visual">
+               <div class="product-modal__image">
+                  <img src="img/product-modal.webp" alt="">
+                  <ul class="product-card__tags semibold_12">
+                     <li class="orange circle">
+                        -25%
+                     </li>
+                     <li class="blur circle">
+                        хит
+                     </li>
+                  </ul>
+               </div>
+               <div class="product-modal__sub product-sub">
+                  <div class="product-sub__image">
+                     <img src="img/product-modal2.webp" alt="">
+                  </div>
+                  <div class="product-sub__text regular_14" style="color: #FFFFFFCC;">
+                     Наши манго доставлены прямиком из солнечных садов Таиланда. Это идеально спелые плоды с сочной,
+                     неволокнистой мякотью медового цвета и насыщенным тропическим ароматом.
+                  </div>
+               </div>
+            </div>
+            <div class="product-modal__main">
+               <div class="product-modal__scrollable scrollbar-none">
+                  <div class="product-modal__head">
+                     <div class="product-modal__header">
+                        <h2 class="h2 product-modal__title">Манго 1 кг</h2>
+                        <span class="body-text" style="color: #0D332F66;">6 кг в 1 коробке, Таиланд</span>
+                     </div>
+                     <div class="product-modal__tabs">
+                        <ul>
+                           <li>
+                              <label>
+                                 <input checked type="radio" name="product-modal-tabs" value="0">
+                                 <span>в 100 граммах
+                                 </span>
+                              </label>
+                           </li>
+                           <li>
+                              <label>
+                                 <input type="radio" name="product-modal-tabs" value="1">
+                                 <span>Срок годности
+
+                                 </span>
+                              </label>
+                           </li>
+                           <li>
+                              <label>
+                                 <input type="radio" name="product-modal-tabs" value="2">
+                                 <span>Хранение
+                                 </span>
+                              </label>
+                           </li>
+                        </ul>
+                        <div data-tab="0" class="tab-content active">
+                           <ul>
+                              <li>
+                                 <span>
+                                    65 </span><span class="body-text" style="color: #0D332F66;">ккал</span>
+                              </li>
+                              <li>
+                                 <span>0,5 г</span><span class="body-text" style="color: #0D332F66;">белки</span>
+                              </li>
+                              <li>
+                                 <span>0,4 г </span><span class="body-text" style="color: #0D332F66;">жиры</span>
+                              </li>
+                              <li>
+                                 <span>13,4 г</span><span class="body-text" style="color: #0D332F66;">углеводы</span>
+                              </li>
+                           </ul>
+                        </div>
+                        <div data-tab="1" class="tab-content">
+                           <span class="body-text" style="color: #0D332F66;">20 суток</span>
+                        </div>
+                        <div data-tab="2" class="tab-content">
+                           <span class="body-text" style="color: #0D332F66;">При температуре от +9°C до +10°C</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="product-modal__more">
+                     <span>Добавить ещё</span>
+                     <div class="pc">
+                        <ul class="home-cart__products">
+                           <li class="cart-product not-in-cart">
+                              <div class="cart-product__image">
+                                 <img src="img/cart1.png" alt="">
+                              </div>
+                              <div class="cart-product__main">
+                                 <span class="regular_14">Ананас Пхукет 1 кг</span>
+                                 <div class="cart-product__footer">
+                                    <button class="btn btn--green cart-product__add">
+                                       <svg style="rotate: 45deg;" width="24" height="24" viewBox="0 0 24 24"
+                                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M13.7026 11.1446C13.9196 11.6419 13.9049 12.2201 13.6637 12.7239L20 19.0602L19.0602 20L12.7232 13.663C12.2201 13.9031 11.644 13.9161 11.1476 13.6997L4.90529 19.942L4 19.0367L10.2327 12.804C10.0001 12.2998 10.0075 11.7082 10.2533 11.1931L4.02349 4.96329L4.96329 4.02349L11.1924 10.2526C11.7082 10.0056 12.3019 9.99653 12.8069 10.2298L19.0367 4L19.942 4.90529L13.7026 11.1446Z"
+                                             fill="white" />
+                                       </svg>
+
+                                    </button>
+                                    <div class="cart-product__count">
+                                       <button>
+                                          <img src="img/icons/minus.svg" alt="">
+                                       </button>
+                                       <span class="medium_14">2</span>
+                                       <button>
+                                          <img src="img/icons/plus.svg" alt="">
+                                       </button>
+                                    </div>
+                                    <p class="semibold_14"><span style="color: #0D332F;">2000 ₽</span></p>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="cart-product not-in-cart">
+                              <div class="cart-product__image">
+                                 <img src="img/cart2.png" alt="">
+                              </div>
+                              <div class="cart-product__main">
+                                 <span class="regular_14">Дуриан 1 кг</span>
+                                 <div class="cart-product__footer">
+                                    <button class="btn btn--green cart-product__add">
+                                       <svg style="rotate: 45deg;" width="24" height="24" viewBox="0 0 24 24"
+                                          fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M13.7026 11.1446C13.9196 11.6419 13.9049 12.2201 13.6637 12.7239L20 19.0602L19.0602 20L12.7232 13.663C12.2201 13.9031 11.644 13.9161 11.1476 13.6997L4.90529 19.942L4 19.0367L10.2327 12.804C10.0001 12.2998 10.0075 11.7082 10.2533 11.1931L4.02349 4.96329L4.96329 4.02349L11.1924 10.2526C11.7082 10.0056 12.3019 9.99653 12.8069 10.2298L19.0367 4L19.942 4.90529L13.7026 11.1446Z"
+                                             fill="white" />
+                                       </svg>
+
+                                    </button>
+                                    <div class="cart-product__count">
+                                       <button>
+                                          <img src="img/icons/minus.svg" alt="">
+                                       </button>
+                                       <span class="medium_14">2</span>
+                                       <button>
+                                          <img src="img/icons/plus.svg" alt="">
+                                       </button>
+                                    </div>
+                                    <p class="semibold_14">
+                                       <span style="color: #9EADAC; text-decoration: line-through;">2000 ₽</span>
+                                       <span style="color: #0D332F;">1500 ₽</span>
+                                    </p>
+                                 </div>
+                              </div>
+                           </li>
+                           <li class="cart-product">
+                              <div class="cart-product__image">
+                                 <img src="img/cart2.png" alt="">
+                              </div>
+                              <div class="cart-product__main">
+                                 <span class="regular_14">Дуриан 1 кг</span>
+                                 <div class="cart-product__footer">
+                                    <div class="cart-product__count">
+                                       <button>
+                                          <img src="img/icons/minus.svg" alt="">
+                                       </button>
+                                       <span class="medium_14">2</span>
+                                       <button>
+                                          <img src="img/icons/plus.svg" alt="">
+                                       </button>
+                                    </div>
+                                    <p class="semibold_14">
+                                       <span style="color: #9EADAC; text-decoration: line-through;">2000 ₽</span>
+                                       <span style="color: #0D332F;">1500 ₽</span>
+                                    </p>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="tablet-mobile">
+                        <ul class="scrollbar-none">
+                           <li>
+                              <div class="product-card">
+                                 <div class="product-card__image">
+                                    <img src="img/product.png" alt="">
+                                    <ul class="product-card__tags semibold_12">
+                                       <li class="blur">
+                                          новинка
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="product-card__main">
+                                    <span class="price product-card__price">1650 ₽</span>
+                                    <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                                 </div>
+                                 <div class="product-card__footer">
+                                    <div class="product-card__count">
+                                       <button class="btn btn--grey circle">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                                          </svg>
+
+                                       </button>
+                                       <input type="text" value="1">
+                                       <button class="btn btn--green circle">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                                fill="white" />
+                                          </svg>
+
+                                       </button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="product-card">
+                                 <div class="product-card__image">
+                                    <img src="img/product.png" alt="">
+                                    <ul class="product-card__tags semibold_12">
+                                       <li class="blur">
+                                          новинка
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="product-card__main">
+                                    <span class="price product-card__price">1650 ₽</span>
+                                    <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                                 </div>
+                                 <div class="product-card__footer">
+                                    <div class="product-card__count">
+                                       <button class="btn btn--grey circle">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                                          </svg>
+
+                                       </button>
+                                       <input type="text" value="1">
+                                       <button class="btn btn--green circle">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                                fill="white" />
+                                          </svg>
+
+                                       </button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="product-card">
+                                 <div class="product-card__image">
+                                    <img src="img/product.png" alt="">
+                                    <ul class="product-card__tags semibold_12">
+                                       <li class="blur">
+                                          новинка
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="product-card__main">
+                                    <span class="price product-card__price">1650 ₽</span>
+                                    <span class="product-card__name body-text">Молодой кокос 1 шт</span>
+                                 </div>
+                                 <div class="product-card__footer">
+                                    <div class="product-card__count">
+                                       <button class="btn btn--grey circle">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path d="M14 7.34961V8.65039H2V7.34961H14Z" fill="#0D332F" />
+                                          </svg>
+
+                                       </button>
+                                       <input type="text" value="1">
+                                       <button class="btn btn--green circle">
+                                          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                             <path
+                                                d="M8.53418 2V7.4043H14V8.5957H8.53418V14H7.34277V8.5957H2V7.4043H7.34277V2H8.53418Z"
+                                                fill="white" />
+                                          </svg>
+
+                                       </button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </li>
+
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="product-modal__more">
+                     <span>Давайте приготовим</span>
+                     <div class="pc">
+                        <ul style="display: flex;flex-direction: column;gap: 15px;">
+                           <li>
+                              <div class="product-receipt">
+                                 <div class="product-receipt__image">
+                                    <img src="img/product-receipt.webp" alt="">
+                                 </div>
+                                 <div class="product-receipt__main">
+                                    <span class="medium_14">
+                                       Манговый смузи
+                                    </span>
+                                    <p>
+                                       <img src="img/icons/time.svg" alt="">
+                                       <span>5 мин</span>
+                                    </p>
+                                 </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="product-receipt">
+                                 <div class="product-receipt__image">
+                                    <img src="img/product-receipt.webp" alt="">
+                                 </div>
+                                 <div class="product-receipt__main">
+                                    <span class="medium_14">
+                                       Манговый смузи
+                                    </span>
+                                    <p>
+                                       <img src="img/icons/time.svg" alt="">
+                                       <span>5 мин</span>
+                                    </p>
+                                 </div>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="product-receipt">
+                                 <div class="product-receipt__image">
+                                    <img src="img/product-receipt.webp" alt="">
+                                 </div>
+                                 <div class="product-receipt__main">
+                                    <span class="medium_14">
+                                       Манговый смузи
+                                    </span>
+                                    <p>
+                                       <img src="img/icons/time.svg" alt="">
+                                       <span>5 мин</span>
+                                    </p>
+                                 </div>
+                              </div>
+                           </li>
+                        </ul>
+                     </div>
+                     <div class="tablet-mobile">
+                        <ul class="scrollbar-none">
+                           <li>
+                              <a href="#" class="receipt-card">
+                                 <div class="receipt-card__image">
+                                    <div class="circle">
+                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M20.5303 19.5H19.1309V7.69238C18.9173 7.70936 18.7009 7.69855 18.4883 7.6543C18.3376 7.62293 18.1926 7.57475 18.0537 7.51465L5.52637 20.042L5.03125 19.5469L4.53613 19.0527L17.0127 6.57617C16.836 6.25407 16.748 5.89088 16.7598 5.52246C16.7605 5.49827 16.764 5.47428 16.7656 5.4502H5.03125V4.0498H20.5303V19.5Z"
+                                             fill="#FF6D2A" />
+                                       </svg>
+
+                                    </div>
+                                    <ul class="product-card__tags semibold_12">
+                                       <li class="blur">
+                                          <img src="img/icons/time.svg" alt="">
+                                          5 мин
+                                       </li>
+                                    </ul>
+                                    <img src="img/receipt1.png" alt="">
+                                 </div>
+                                 <h3 class="receipt-card__title h3">Манговый смузи</h3>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" class="receipt-card">
+                                 <div class="receipt-card__image">
+                                    <div class="circle">
+                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M20.5303 19.5H19.1309V7.69238C18.9173 7.70936 18.7009 7.69855 18.4883 7.6543C18.3376 7.62293 18.1926 7.57475 18.0537 7.51465L5.52637 20.042L5.03125 19.5469L4.53613 19.0527L17.0127 6.57617C16.836 6.25407 16.748 5.89088 16.7598 5.52246C16.7605 5.49827 16.764 5.47428 16.7656 5.4502H5.03125V4.0498H20.5303V19.5Z"
+                                             fill="#FF6D2A" />
+                                       </svg>
+
+                                    </div>
+                                    <ul class="product-card__tags semibold_12">
+                                       <li class="blur">
+                                          <img src="img/icons/time.svg" alt="">
+                                          5 мин
+                                       </li>
+                                    </ul>
+                                    <img src="img/receipt1.png" alt="">
+                                 </div>
+                                 <h3 class="receipt-card__title h3">Манговый смузи</h3>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" class="receipt-card">
+                                 <div class="receipt-card__image">
+                                    <div class="circle">
+                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M20.5303 19.5H19.1309V7.69238C18.9173 7.70936 18.7009 7.69855 18.4883 7.6543C18.3376 7.62293 18.1926 7.57475 18.0537 7.51465L5.52637 20.042L5.03125 19.5469L4.53613 19.0527L17.0127 6.57617C16.836 6.25407 16.748 5.89088 16.7598 5.52246C16.7605 5.49827 16.764 5.47428 16.7656 5.4502H5.03125V4.0498H20.5303V19.5Z"
+                                             fill="#FF6D2A" />
+                                       </svg>
+
+                                    </div>
+                                    <ul class="product-card__tags semibold_12">
+                                       <li class="blur">
+                                          <img src="img/icons/time.svg" alt="">
+                                          5 мин
+                                       </li>
+                                    </ul>
+                                    <img src="img/receipt1.png" alt="">
+                                 </div>
+                                 <h3 class="receipt-card__title h3">Манговый смузи</h3>
+                              </a>
+                           </li>
+                           <li>
+                              <a href="#" class="receipt-card">
+                                 <div class="receipt-card__image">
+                                    <div class="circle">
+                                       <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                             d="M20.5303 19.5H19.1309V7.69238C18.9173 7.70936 18.7009 7.69855 18.4883 7.6543C18.3376 7.62293 18.1926 7.57475 18.0537 7.51465L5.52637 20.042L5.03125 19.5469L4.53613 19.0527L17.0127 6.57617C16.836 6.25407 16.748 5.89088 16.7598 5.52246C16.7605 5.49827 16.764 5.47428 16.7656 5.4502H5.03125V4.0498H20.5303V19.5Z"
+                                             fill="#FF6D2A" />
+                                       </svg>
+
+                                    </div>
+                                    <ul class="product-card__tags semibold_12">
+                                       <li class="blur">
+                                          <img src="img/icons/time.svg" alt="">
+                                          5 мин
+                                       </li>
+                                    </ul>
+                                    <img src="img/receipt1.png" alt="">
+                                 </div>
+                                 <h3 class="receipt-card__title h3">Манговый смузи</h3>
+                              </a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="product-modal__btn">
+                  <button class="btn btn--green">
+                     Добавить за 1100 ₽
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal cart-modal" id="cart-modal">
+         <div class="modal__content cart-modal__content">
+
+            <div class="cart-modal__main">
+               <div class="cart-modal__header">
+                  <span class="h2">Корзина</span>
+                  <button class="modal__close btn btn--grey circle">
+                     <img src="img/icons/cross.svg" alt="">
+                  </button>
+               </div>
+               <div class="home-cart">
+                  <div class="home-cart__header">
+                     <p>
+                        <span class="h4" style="color: #0D332F;">2 товара</span>
+                        <span class="regular_14" style="color: #0D332F66;">3 кг</span>
+                     </p>
+                     <button>
+                        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M9.33203 1.16699C9.86239 1.16699 10.371 1.37796 10.7461 1.75293C11.1211 2.12793 11.3319 2.63668 11.332 3.16699V3.83301H14C14.3682 3.83301 14.667 4.13181 14.667 4.5C14.667 4.86819 14.3682 5.16699 14 5.16699H13.332V13.834C13.332 14.3644 13.1212 14.873 12.7461 15.248C12.371 15.6231 11.8625 15.834 11.332 15.834H4.66504C4.13472 15.8339 3.62597 15.623 3.25098 15.248C2.87601 14.873 2.66504 14.3643 2.66504 13.834V5.16699H2C1.63181 5.16699 1.33301 4.86819 1.33301 4.5C1.33301 4.13181 1.63181 3.83301 2 3.83301H4.66504V3.16699C4.66513 2.63668 4.87598 2.12793 5.25098 1.75293C5.62597 1.37793 6.13472 1.16708 6.66504 1.16699H9.33203ZM3.99902 5.16699V13.834C3.99902 14.0108 4.06931 14.1806 4.19434 14.3057C4.31925 14.4304 4.4885 14.5009 4.66504 14.501H11.332C11.5088 14.501 11.6787 14.4307 11.8037 14.3057C11.9287 14.1806 11.999 14.0108 11.999 13.834V5.16699H3.99902ZM6.66504 2.50098C6.48835 2.50106 6.31928 2.57134 6.19434 2.69629C6.06939 2.82124 5.99911 2.9903 5.99902 3.16699V3.83301H9.99902V3.16699C9.99894 2.99045 9.92846 2.82121 9.80371 2.69629C9.67869 2.57126 9.50884 2.50098 9.33203 2.50098H6.66504Z"
+                              fill="#0D332F" fill-opacity="0.4" />
+                        </svg>
+                     </button>
+                  </div>
+                  <div class="home-cart__delivery cart-delivery">
+                     <div class="cart-delivery__header">
+                        <div class="circle">
+                           <img src="img/icons/delivery.svg" alt="">
+                        </div>
+                        <p>
+                           <span class="h4">Доставка 500₽</span>
+                           <img src="img/icons/info.svg" alt="">
+                        </p>
+                     </div>
+                     <div class="cart-delivery__main">
+                        <span class="regular_14">Ещё 500 ₽ до бесплатной доставки</span>
+                        <p><span style="width: 80%;"></span></p>
+                     </div>
+                  </div>
+                  <ul class="home-cart__products">
+                     <li class="cart-product">
+                        <div class="cart-product__image">
+                           <img src="img/cart1.png" alt="">
+                        </div>
+                        <div class="cart-product__main">
+                           <span class="regular_14">Ананас Пхукет 1 кг</span>
+                           <div class="cart-product__footer">
+                              <div class="cart-product__count">
+                                 <button>
+                                    <img src="img/icons/minus.svg" alt="">
+                                 </button>
+                                 <span class="medium_14">2</span>
+                                 <button>
+                                    <img src="img/icons/plus.svg" alt="">
+                                 </button>
+                              </div>
+                              <p class="semibold_14"><span style="color: #0D332F;">2000 ₽</span></p>
+                           </div>
+                        </div>
+                     </li>
+                     <li class="cart-product">
+                        <div class="cart-product__image">
+                           <img src="img/cart2.png" alt="">
+                        </div>
+                        <div class="cart-product__main">
+                           <span class="regular_14">Дуриан 1 кг</span>
+                           <div class="cart-product__footer">
+                              <div class="cart-product__count">
+                                 <button>
+                                    <img src="img/icons/minus.svg" alt="">
+                                 </button>
+                                 <span class="medium_14">2</span>
+                                 <button>
+                                    <img src="img/icons/plus.svg" alt="">
+                                 </button>
+                              </div>
+                              <p class="semibold_14">
+                                 <span style="color: #9EADAC; text-decoration: line-through;">2000 ₽</span>
+                                 <span style="color: #0D332F;">1500 ₽</span>
+                              </p>
+                           </div>
+                        </div>
+                     </li>
+                  </ul>
+                  <ul class="home-cart__items">
+                     <li>
+                        <span>Товары</span>
+                        <span>3500 ₽</span>
+                     </li>
+                     <li>
+                        <span>Скидки</span>
+                        <span>-300 ₽</span>
+                     </li>
+                     <li>
+                        <span>Доставка</span>
+                        <span>500 ₽</span>
+                     </li>
+                  </ul>
+                  <div class="home-cart__res">
+                     <p>
+                        <span>К оплате</span>
+                        <span>5700 ₽</span>
+                     </p>
+                     <a href="#" class="btn btn--green">К оформлению</a>
+                  </div>
+               </div>
+               <div class="empty-cart" style="display: none;">
+                  <div class="home-cart__delivery cart-delivery">
+                     <div class="cart-delivery__header">
+                        <div class="circle">
+                           <img src="img/icons/delivery.svg" alt="">
+                        </div>
+                        <div>
+                           <p>
+                              <span class="h4">Бесплатная доставка </span>
+                              <img src="img/icons/info.svg" alt="">
+                           </p>
+                           <div class="cart-delivery__from regular_14" style="color: #0D332F80;">от 4000 ₽</div>
+                        </div>
+                     </div>
+
+                  </div>
+                  <div class="empty-cart__main">
+                     <p>В вашей корзине пока <br> нет товаров</p>
+                     <img src="img/icons/cart.svg" alt="">
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal address-modal" id="address-modal">
+         <div class="modal__content address-modal__content">
+            <div class="address-modal__header">
+               <span class="h3">Укажите адрес доставки</span>
+               <button class="address-modal__close modal__close btn btn--grey circle">
+                  <img src="img/icons/cross.svg" alt="">
+               </button>
+
+            </div>
+            <ul class="products-section__filters address-modal__filters scrollbar-none">
+               <li>
+                  <label>
+                     <input checked type="radio" name="address-modal-tabs" value="0">
+                     Доставка
+                  </label>
+               </li>
+               <li>
+                  <label>
+                     <input type="radio" name="address-modal-tabs" value="1">
+                     Самовывоз
+                  </label>
+               </li>
+            </ul>
+            <div class="header__search address-modal__input">
+               <input type="text" placeholder="Введите адрес">
+               <button>
+                  <img src="img/icons/search.svg" alt="">
+               </button>
+               <!-- Комментарий для Вовы, ul добавить класс active, для отображения -->
+               <ul class="scrollbar-none">
+                  <li>
+                     <span class="medium_14">Кастанаевская ул</span>
+                     <span style="color: #0D332F66;" class="regular_12">Москва</span>
+                  </li>
+                  <li>
+                     <span class="medium_14">Кастанаевская ул</span>
+                     <span style="color: #0D332F66;" class="regular_12">Москва</span>
+                  </li>
+                  <li>
+                     <span class="medium_14">Кастанаевская ул</span>
+                     <span style="color: #0D332F66;" class="regular_12">Москва</span>
+                  </li>
+                  <li>
+                     <span class="medium_14">Кастанаевская ул</span>
+                     <span style="color: #0D332F66;" class="regular_12">Москва</span>
+                  </li>
+                  <li>
+                     <span class="medium_14">Кастанаевская ул</span>
+                     <span style="color: #0D332F66;" class="regular_12">Москва</span>
+                  </li>
+                  <li>
+                     <span class="medium_14">Кастанаевская ул</span>
+                     <span style="color: #0D332F66;" class="regular_12">Москва</span>
+                  </li>
+                  <li>
+                     <span class="medium_14">Кастанаевская ул</span>
+                     <span style="color: #0D332F66;" class="regular_12">Москва</span>
+                  </li>
+                  <li>
+                     <span class="medium_14">Кастанаевская ул</span>
+                     <span style="color: #0D332F66;" class="regular_12">Москва</span>
+                  </li>
+                  <li>
+                     <span class="medium_14">Кастанаевская ул</span>
+                     <span style="color: #0D332F66;" class="regular_12">Москва</span>
+                  </li>
+                  <li>
+                     <span class="medium_14">Кастанаевская ул</span>
+                     <span style="color: #0D332F66;" class="regular_12">Москва</span>
+                  </li>
+               </ul>
+            </div>
+            <div class="address-modal__map">
+               <img src="img/map.webp" alt="">
+            </div>
+            <div data-tab="0" class="active">
+               <div class="address-modal__inputs">
+                  <div class="app-input">
+                     <input type="text">
+                     <label>Подъезд*</label>
+                  </div>
+                  <div class="app-input">
+                     <input type="text">
+                     <label>Этаж*</label>
+                  </div>
+                  <div class="app-input">
+                     <input type="text">
+                     <label>Кв/офис*</label>
+                  </div>
+                  <div class="app-input w-full">
+                     <input type="text" placeholder="Комментарий курьеру">
+                     <label></label>
+                  </div>
+               </div>
+            </div>
+            <div data-tab="0" class="active">
+               <div class="address-modal__submit">
+                  <button class="btn btn--green" disabled>Подтвердить адрес</button>
+               </div>
+            </div>
+
+            <div data-tab="1">
+               <!-- Комментарий для Вовы, address-pickup добавить класс active, для отображения -->
+               <div class="address-pickup">
+                  <div class="address-pickup__header">
+                     <div class="address-pickup__logo">
+                        <img src="img/icons/logo.svg" alt="">
+                     </div>
+                     <button class="address-pickup__close">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path
+                              d="M13.7026 11.1446C13.9196 11.6419 13.9049 12.2201 13.6637 12.7239L20 19.0602L19.0602 20L12.7232 13.663C12.2201 13.9031 11.644 13.9161 11.1476 13.6997L4.90529 19.942L4 19.0367L10.2327 12.804C10.0001 12.2998 10.0075 11.7082 10.2533 11.1931L4.02349 4.96329L4.96329 4.02349L11.1924 10.2526C11.7082 10.0056 12.3019 9.99653 12.8069 10.2298L19.0367 4L19.942 4.90529L13.7026 11.1446Z"
+                              fill="#0D332F66" />
+                        </svg>
+
+                     </button>
+                  </div>
+                  <div class="address-pickup__info">
+                     <div class="address-pickup__item">
+                        <span style="color: #0D332F66;" class="regular_12">Самовывоз по адресу:</span>
+                        <p class="medium_14">
+                           Москва, район Коммунарка, Калужское шоссе, 22-й километр, 10, подъезд 1
+                        </p>
+                     </div>
+                     <div class="address-pickup__item">
+                        <span style="color: #0D332F66;" class="regular_12">График работы:</span>
+                        <p class="medium_14">Пн-Вс 05:00–19:00</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Комментарий для Вовы, Успех -->
+         <div class="modal__content address-success__content" style="display: none;">
+            <button class="address-modal__close modal__close btn btn--grey circle">
+               <img src="img/icons/cross.svg" alt="">
+            </button>
+            <img src="img/icons/address-success.svg" alt="">
+            <span class="h3">Адрес подтвержден</span>
+            <span class="body-text" style="color: #0D332FCC;">Спасибо!</span>
+         </div>
+      </div>
+      <div class="modal address-modal" id="address-modal-choose">
+         <div class="modal__content address-modal__content">
+            <div class="address-modal__header">
+               <span class="h3">Выбрать адрес доставки</span>
+               <button class="address-modal__close modal__close btn btn--grey circle">
+                  <img src="img/icons/cross.svg" alt="">
+               </button>
+
+            </div>
+            <ul class="products-section__filters address-modal__filters scrollbar-none">
+               <li>
+                  <label>
+                     <input checked type="radio" name="address-modal-tabs1" value="0">
+                     Доставка
+                  </label>
+               </li>
+               <li>
+                  <label>
+                     <input type="radio" name="address-modal-tabs1" value="1">
+                     Самовывоз
+                  </label>
+               </li>
+            </ul>
+            <div data-tab="0" class="active">
+               <ul class="address-choose__items">
+                  <li class="address-choose active">
+                     <div class="circle"></div>
+                     <div class="address-choose__main">
+                        <span class="medium_14">Кастанаевская ул, 30к2</span>
+                        <span style="color: #0D332F66;" class="regular_12">подъезд 7, этаж 12, кв 44,</span>
+                     </div>
+                     <button class="address-choose__edit modal__link" href="#address-modal">
+                        <img src="img/icons/edit.svg" alt="">
+                     </button>
+                  </li>
+                  <li class="address-choose">
+                     <div class="circle"></div>
+                     <div class="address-choose__main">
+                        <span class="medium_14">Кастанаевская ул, 30к2</span>
+                        <span style="color: #0D332F66;" class="regular_12">подъезд 7, этаж 12, кв 44,</span>
+                     </div>
+                     <button class="address-choose__edit modal__link" href="#address-modal">
+                        <img src="img/icons/edit.svg" alt="">
+                     </button>
+                  </li>
+               </ul>
+            </div>
+
+            <div data-tab="0" class="active">
+               <div class="address-modal__submit">
+                  <button class="btn btn--green" style="gap: 12px;">
+                     <svg style="rotate: 45deg;" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                           d="M13.7026 11.1446C13.9196 11.6419 13.9049 12.2201 13.6637 12.7239L20 19.0602L19.0602 20L12.7232 13.663C12.2201 13.9031 11.644 13.9161 11.1476 13.6997L4.90529 19.942L4 19.0367L10.2327 12.804C10.0001 12.2998 10.0075 11.7082 10.2533 11.1931L4.02349 4.96329L4.96329 4.02349L11.1924 10.2526C11.7082 10.0056 12.3019 9.99653 12.8069 10.2298L19.0367 4L19.942 4.90529L13.7026 11.1446Z"
+                           fill="white" />
+                     </svg>
+
+                     Добавить новый
+                  </button>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal auth-modal" id="auth-modal">
+         <div class="modal__content auth-modal__content">
+            <button class="address-modal__close modal__close btn btn--grey circle">
+               <img src="img/icons/cross.svg" alt="">
+            </button>
+            <div class="auth-modal__step auth-modal__first active">
+               <div class="auth-modal__main">
+                  <div class="auth-modal__image">
+                     <img src="img/auth-modal.png" alt="">
+                  </div>
+                  <div class="auth-modal__text">
+                     <p class="h3">Вход или регистрация</p>
+                     <p style="color: #0D332FCC;" class="body-text">Чтобы сохранять корзину, следить за историей покупок
+                        и
+                        статусом заказа</p>
+                  </div>
+                  <div class="auth-modal__form">
+                     <div class="app-input">
+                        <input type="text" data-phone>
+                        <label>Номер телефона*</label>
+                     </div>
+                     <!-- Комментарий для Вовы, добавить класс loading, при нажатии на кнопку -->
+                     <button class="btn btn--green">
+                        <span>Получить код</span>
+                        <span class="loader"></span>
+                     </button>
+                  </div>
+               </div>
+               <div class="auth-modal__footer">
+                  <label class="app-checkbox">
+                     <input type="checkbox">
+                     <div></div>
+                     <span class="medium_12" style="color: #0D332F66;">Я согласен с <a style="color: #0D332F;" href="#"
+                           target="_blank">Согласием
+                           на обработку персональных данных</a></span>
+                  </label>
+                  <label class="app-checkbox">
+                     <input type="checkbox">
+                     <div></div>
+                     <span class="medium_12" style="color: #0D332F66;">Я согласен с <a style="color: #0D332F;" href="#"
+                           target="_blank">Соглашением
+                           на оферту о сотрудничестве</a></span>
+                  </label>
+               </div>
+
+            </div>
+            <div class="auth-modal__step auth-modal__second">
+               <button class="auth-modal__back">
+                  <img src="img/icons/arrow-back.svg" alt="">
+               </button>
+               <div class="auth-modal__text">
+                  <p class="h3">Подтвердите номер</p>
+                  <p style="color: #0D332FCC;" class="body-text">Мы отправили код на номер
+                     <span style="color: #FF6D2A;">7 (969)657-54-33</span>
+                  </p>
+               </div>
+               <div class="auth-modal__form">
+                  <div class="app-input">
+                     <input type="text">
+                     <label>Введите код</label>
+                  </div>
+               </div>
+               <p class="auth-modal__timer">Запросить новый код можно через
+                  <span>00:14</span>
+               </p>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="https://unpkg.com/imask"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="js/app.js"></script>
+</body>
+
+</html>

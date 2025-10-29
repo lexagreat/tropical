@@ -1,0 +1,274 @@
+.contacts-grid {
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   gap: 4px;
+   @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: column;
+   }
+   // .contacts-grid__card
+
+   &__card {
+      background-color: #e0e3de;
+      border-radius: 32px;
+      position: relative;
+      padding: 40px;
+      padding-top: 80px;
+
+      & > .circle {
+         position: absolute;
+         top: 6px;
+         left: 6px;
+         border: 1px solid var(--Green-10, #0d332f1a);
+         --size: 52px;
+         @media (max-width: $mobile) {
+            --size: 44px;
+         }
+      }
+      @media (max-width: $mobile) {
+         padding: 20px;
+         padding-top: 64px;
+         border-radius: 32px;
+      }
+   }
+
+   // .contacts-grid__info
+
+   &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      div {
+         color: #0d332f !important;
+      }
+   }
+
+   // .contacts-grid__last
+
+   &__last {
+      padding-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      grid-column: span 2;
+      @media (max-width: $mobile) {
+         padding: 20px;
+         padding-top: 20px;
+         align-items: flex-start;
+         flex-direction: column;
+         gap: 20px;
+      }
+   }
+
+   // .contacts-grid__btns
+
+   &__btns {
+      display: flex;
+      gap: 6px;
+      .circle {
+         --size: 56px;
+      }
+      .btn--orange {
+         background-color: #ff6d2a;
+         padding: 0 18px;
+         color: white;
+      }
+      @media (max-width: $mobile) {
+         .btn {
+            --size: 48px;
+         }
+      }
+   }
+
+   // .contacts-grid__btn
+
+   &__btn {
+   }
+}
+.contacts-form {
+   padding: 40px;
+   border-radius: 40px;
+   background-color: #0d332f;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   gap: 28px;
+   @media (max-width: $tablet) {
+      padding: 32px;
+      border-radius: 32px;
+      gap: 24px;
+   }
+   @media (max-width: $mobile) {
+      padding: 20px;
+      border-radius: 20px;
+   }
+   // .contacts-form__title
+
+   &__title {
+   }
+
+   // .contacts-form__subtitle
+
+   &__subtitle {
+   }
+
+   // .contacts-form__inputs
+
+   &__inputs {
+      @media (max-width: $mobile) {
+         display: flex;
+         flex-direction: column;
+      }
+   }
+
+   // .contacts-form__checks
+
+   &__checks {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      label {
+         color: white;
+         margin: 0;
+         a {
+            opacity: 0.5;
+            color: white;
+         }
+      }
+   }
+   &__send {
+      background-color: #ffffff0d;
+      color: #ffffff33;
+      @media (max-width: $mobile) {
+         --size: 48px;
+      }
+   }
+}
+.contacts-page__main {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+   .catalog-page__aside {
+      margin-bottom: -12px;
+      @media (max-width: $mobile) {
+         margin-bottom: 0;
+      }
+   }
+   @media (max-width: $mobile) {
+      gap: 24px;
+   }
+}
+.contacts-path {
+   display: flex;
+   flex-direction: column;
+   gap: 28px;
+   @media (max-width: $mobile) {
+      gap: 20px;
+   }
+   &__image {
+      position: relative;
+      border-radius: 32px;
+      overflow: hidden;
+      & > img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+   &__marker {
+      position: absolute;
+      top: 30%;
+      left: 30%;
+      z-index: 2;
+      cursor: pointer;
+      &.active {
+         img {
+            display: none;
+         }
+         .contacts-path__hint {
+            display: block;
+         }
+      }
+   }
+   &__hint {
+      translate: -50%;
+      display: none;
+      color: #ffffffcc;
+      border-radius: 16px;
+      background-color: #0d332f;
+      @include medium_12;
+      padding: 16px 13px;
+      position: relative;
+      &::after {
+         content: "";
+         display: block;
+         position: absolute;
+         top: 99%;
+         left: 50%;
+         translate: -50% 0;
+         width: 54px;
+         height: 18px;
+         background: url(../img/icons/geo-marker-triangle.svg);
+      }
+   }
+}
+.contacts-info {
+   padding-top: 40px;
+   display: flex;
+   flex-direction: column;
+   gap: 28px;
+   .btn {
+      background-color: #ff6d2a;
+      padding: 0 18px;
+      color: white;
+      gap: 8px;
+      @media (max-width: $mobile) {
+         --size: 48px;
+      }
+   }
+   @media (max-width: $tablet) {
+      padding: 32px;
+      gap: 24px;
+   }
+   @media (max-width: $mobile) {
+      padding: 20px;
+      gap: 20px;
+   }
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @media (max-width: $mobile) {
+      }
+   }
+   &__infos {
+      display: flex;
+      gap: 54px;
+      & > div {
+         max-width: 402px;
+         display: flex;
+         flex-direction: column;
+         gap: 8px;
+      }
+      @media (max-width: $tablet) {
+         gap: 46px;
+      }
+      @media (max-width: $mobile) {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         & > div {
+            &:nth-child(1) {
+               display: grid;
+               grid-template-columns: repeat(2, 1fr);
+               & > div {
+                  &:nth-child(1) {
+                     grid-column: span 2;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

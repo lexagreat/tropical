@@ -290,3 +290,107 @@
       color: #0d332f;
    }
 }
+.order-modal {
+   .modal__close {
+      z-index: 10;
+   }
+   // .order-modal__content
+
+   &__content {
+      padding: 0;
+      overflow: hidden;
+      @media (max-width: $tablet) {
+         left: 0;
+         top: 0;
+         right: 0;
+         bottom: 0;
+         translate: unset;
+         transform: unset;
+         width: 100%;
+         max-height: 100%;
+         border-radius: 0;
+      }
+      @media (max-width: $mobile) {
+         padding: 0 12px;
+      }
+   }
+   &__scrollable {
+      position: relative;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding: 32px;
+      padding-bottom: 152px;
+      height: calc(100vh - 80px);
+      overflow: auto;
+      @media (max-width: $tablet) {
+         height: calc(100vh - 0px);
+      }
+      .cart-product {
+         align-items: center;
+      }
+      .home-cart__res {
+         padding-top: 14px;
+         border-top: 1px dashed #0d332f26;
+         margin-top: 12px;
+      }
+      @media (max-width: $mobile) {
+         padding: 0 12px;
+         padding-bottom: 80px;
+         gap: 24px;
+      }
+   }
+   // .order-modal__title
+
+   &__title {
+      @media (max-width: $mobile) {
+         padding-top: 21px;
+         padding-bottom: 9px;
+      }
+   }
+
+   // .order-modal__info
+
+   &__info {
+      display: flex;
+      flex-direction: column;
+      li {
+         height: 50px;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         border-bottom: 1px dashed #0d332f26;
+      }
+   }
+
+   // .order-modal__products
+
+   &__products {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      ul {
+         display: flex;
+         flex-direction: column;
+         gap: 16px;
+      }
+   }
+
+   // .order-modal__list
+
+   &__list {
+   }
+
+   // .order-modal__footer
+
+   &__footer {
+      position: sticky;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      .btn {
+         border: 1px solid #0d332f26;
+      }
+   }
+}

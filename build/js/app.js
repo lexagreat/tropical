@@ -21,6 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
    checkout();
    receipts();
    authModal();
+   accordion(
+      ".header-menu__links li button",
+      ".header-menu__links li .collapse"
+   );
+   about();
+   search();
+   contacts();
 });
 
 function productsSection() {
@@ -110,21 +117,6 @@ function home() {
             },
          },
       });
-      // gsap.to(techBg, {
-
-      //    ease: "none",
-      //    scrollTrigger: {
-      //       trigger: tech,
-      //       start: `top 10%`,
-      //       end: () => `+=600px`,
-      //       scrub: 0.1,
-      //       invalidateOnRefresh: true,
-      //       // markers: true,
-      //       onUpdate: (self) => {
-
-      //       },
-      //    },
-      // });
    }
    function faq() {
       const slides = document.querySelectorAll(".faq-slide");
@@ -197,6 +189,16 @@ function home() {
    hero();
    faq();
    about();
+}
+function search() {
+   const input = document.querySelector(
+      ".header__wrapper .header__search input"
+   );
+   const searchModal = document.querySelector(".modal.header-search");
+   if (!input) return;
+   input.addEventListener("click", () => {
+      popupOpen(searchModal);
+   });
 }
 function addressModal() {
    tabs('[name="address-modal-tabs"]', "#address-modal [data-tab]");
@@ -340,6 +342,411 @@ function authModal() {
       previousStep.classList.add("active");
    });
 }
+function contacts() {
+   function path() {
+      const marker = document.querySelector(".contacts-path__marker");
+      marker.onclick = () => {
+         marker.classList.toggle("active");
+      };
+   }
+   function nav() {
+      const links = document.querySelectorAll(
+         ".catalog-page__aside a[href^='#']"
+      );
+      if (!links.length) return;
+
+      links.forEach((link) => {
+         link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute("href");
+            const targetSection = document.querySelector(targetId);
+            if (targetSection) {
+               targetSection.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+               });
+            }
+         });
+      });
+
+      const sections = Array.from(links)
+         .map((link) => {
+            const id = link.getAttribute("href");
+            return document.querySelector(id);
+         })
+         .filter(Boolean);
+
+      function updateActiveLink() {
+         const scrollTop = window.scrollY;
+         const offset = 150;
+         const windowBottom = scrollTop + window.innerHeight;
+         const docHeight = document.documentElement.scrollHeight;
+
+         let currentSection = sections[0];
+
+         if (windowBottom >= docHeight - 50) {
+            currentSection = sections[sections.length - 1];
+         } else {
+            sections.forEach((section) => {
+               const sectionTop = section.offsetTop - offset;
+               if (scrollTop >= sectionTop) {
+                  currentSection = section;
+               }
+            });
+         }
+
+         links.forEach((link) => {
+            const targetId = link.getAttribute("href");
+            if (currentSection && targetId === `#${currentSection.id}`) {
+               link.classList.add("active");
+            } else {
+               link.classList.remove("active");
+            }
+         });
+      }
+
+      window.addEventListener("scroll", updateActiveLink);
+      updateActiveLink();
+   }
+   path();
+   nav();
+}
+function about() {
+   function hero() {
+      const images = document.querySelectorAll(".about-hero__image");
+      const wrapper = document.querySelector(".about-hero__wrapper");
+      if (!images.length) return;
+
+      const wrapperHeight = wrapper.offsetHeight;
+      const viewportHeight = window.innerHeight;
+      const scrollDistance = wrapperHeight - viewportHeight;
+      const animationDuration = scrollDistance / images.length;
+
+      const gallery = document.querySelector(".about-hero__gallery");
+      const overlap = 0.2;
+
+      const tempDiv = document.createElement("div");
+      tempDiv.style.width = "var(--container)";
+      document.body.appendChild(tempDiv);
+      const containerPadding = parseFloat(getComputedStyle(tempDiv).width);
+      document.body.removeChild(tempDiv);
+
+      const marginLeft =
+         window.innerWidth > 1024
+            ? wrapper.clientWidth - gallery.clientWidth + containerPadding
+            : containerPadding;
+
+      images.forEach((image, index) => {
+         const options = {
+            scrollTrigger: {
+               trigger: wrapper,
+               start: `top -=${index * animationDuration * overlap}`,
+               end: `top -=${
+                  index * animationDuration * overlap + animationDuration
+               }`,
+               scrub: 0.1,
+               invalidateOnRefresh: true,
+               markers: false,
+            },
+         };
+
+         if (image.classList.contains("last")) {
+            gsap.to(gallery, {
+               marginRight: `-${containerPadding}`,
+               width: "100vw",
+               height: "100vh",
+               marginLeft: `-${marginLeft}px`,
+               borderRadius: "0",
+               top: 0,
+               ...options,
+            });
+            gsap.to(image, {
+               borderRadius: "0",
+               ...options,
+            });
+         } else {
+            gsap.to(image, {
+               y: "-90vh",
+               x: "-90vw",
+               scale: 0.8,
+               rotate: "13deg",
+               ...options,
+            });
+         }
+      });
+   }
+   let lastScroll = 0;
+   let ticking = false;
+
+   function onScroll() {
+      const header = document.querySelector(".header");
+      const currentScroll = Math.max(0, window.scrollY);
+      if (currentScroll > lastScroll) {
+         header.style.translate = "0 -100%";
+      } else {
+         header.style.translate = "";
+      }
+
+      lastScroll = currentScroll;
+      ticking = false;
+   }
+   function cifra() {
+      const slider = document.querySelector(".about-cifra .swiper");
+      if (!slider) return;
+
+      const swiper = new Swiper(slider, {
+         loop: true,
+         centeredSlides: true,
+         initialSlide: 1,
+         navigation: {
+            nextEl: document.querySelector(".about-cifra .next"),
+            prevEl: document.querySelector(".about-cifra .prev"),
+         },
+         mousewheel: {
+            enabled: true,
+            forceToAxis: true,
+         },
+         breakpoints: {
+            0: {
+               slidesPerView: 1.5,
+            },
+            569: {
+               slidesPerView: 2,
+            },
+            1025: {
+               slidesPerView: 3,
+            },
+         },
+      });
+      setTimeout(() => {
+         slider.style.height = slider.offsetHeight + "px";
+      }, 500);
+   }
+   function geo() {
+      const sliderElem = document.querySelector(".about-geo .swiper");
+      const dots = document.querySelectorAll(".about-geo__dot");
+      if (!sliderElem) return;
+
+      let swiper = new Swiper(sliderElem, {
+         slidesPerView: 1,
+         spaceBetween: 16,
+         pagination: {
+            el: document.querySelector(".about-geo .about-geo__pagination"),
+            type: "custom",
+            renderCustom: function (swiper, current, total) {
+               return `<span class="swiper-pagination-current">${current}</span><span class="swiper-pagination-total">/${total}</span>`;
+            },
+         },
+         navigation: {
+            prevEl: ".about-geo .about-geo__nav .prev",
+            nextEl: ".about-geo .about-geo__nav .next",
+         },
+         on: {
+            slideChange(swiper) {
+               dots.forEach((item) => item.classList.remove("active"));
+               dots[swiper.activeIndex].classList.add("active");
+            },
+            init() {
+               dots[0].classList.add("active");
+            },
+         },
+      });
+      dots.forEach((item, index) => {
+         item.onclick = () => {
+            dots.forEach((dot) => dot.classList.remove("active"));
+            item.classList.add("active");
+            swiper.slideTo(index);
+         };
+      });
+   }
+   function reviews() {
+      const sliderElem = document.querySelector(".about-reviews .swiper");
+
+      if (!sliderElem) return;
+
+      let swiper = new Swiper(sliderElem, {
+         slidesPerView: "auto",
+         mousewheel: {
+            enabled: true,
+            forceToAxis: true,
+         },
+         spaceBetween: 4,
+         pagination: {
+            el: document.querySelector(".about-reviews .about-geo__pagination"),
+            type: "custom",
+            renderCustom: function (swiper, current, total) {
+               return `<span class="swiper-pagination-current">${current}</span><span class="swiper-pagination-total">/${total}</span>`;
+            },
+         },
+         navigation: {
+            prevEl: ".about-reviews .about-geo__nav .prev",
+            nextEl: ".about-reviews .about-geo__nav .next",
+         },
+      });
+   }
+   function label() {
+      const image = document.querySelector(".about-label__image");
+      const btn = document.querySelector(".about-label__image .btn");
+      let width;
+      let flexBasis;
+      let height;
+
+      if (window.innerWidth > 1024) {
+         width = 608;
+         flexBasis = 608;
+         height = 530;
+      } else if (window.innerWidth > 768) {
+         width = "100%";
+         flexBasis = 634;
+         height = 634;
+      } else {
+         width = "100%";
+         flexBasis = 366;
+         height = 366;
+      }
+
+      if (!image) return;
+      gsap.to(image, {
+         width,
+         height,
+         flexBasis,
+         scrollTrigger: {
+            trigger: image,
+            start: `top 70%`,
+            end: `top 20%`,
+            scrub: 0.1,
+            invalidateOnRefresh: true,
+            markers: false,
+            onUpdate: (self) => {
+               if (self.progress > 0.9) {
+                  btn.style.opacity = 1;
+                  btn.style.pointerEvents = "all";
+               } else {
+                  btn.style.opacity = 0;
+                  btn.style.pointerEvents = "none";
+               }
+            },
+         },
+      });
+   }
+   document.addEventListener("scroll", onScroll);
+   hero();
+   cifra();
+   geo();
+   reviews();
+   label();
+}
+
+function accordion(linkSelector, contentSelector) {
+   // получаем линки
+   const openLinks = document.querySelectorAll(`${linkSelector}`);
+   // контенты
+   const contents = document.querySelectorAll(`${contentSelector}`);
+   if (openLinks.length > 0) {
+      for (let i = 0; i < openLinks.length; i++) {
+         let openLink = openLinks[i];
+         openLink.addEventListener("click", () => {
+            // все прячем
+            for (let j = 0; j < contents.length; j++) {
+               // если хоть один открывается - return
+               if (contents[j].classList.contains("collapsing")) {
+                  return;
+               } // Иначе
+               // все прячем
+               slideHide(contents[j]);
+            }
+            for (let j = 0; j < openLinks.length; j++) {
+               openLinks[j].classList.remove("active");
+            }
+            // записываем в переменную нужный таб
+            let content = contents[i];
+            // работаем с классами линка
+            if (content.classList.contains("collapsing")) {
+               return;
+            } else if (content.classList.contains("collapse_show")) {
+               openLink.classList.remove("active");
+            } else {
+               openLink.classList.add("active");
+            }
+            // показываем нужный
+            slideShow(content);
+         });
+      }
+   }
+}
+
+function slideShow(el, duration = 500) {
+   // завершаем работу метода, если элемент содержит класс collapsing или collapse_show
+   if (
+      el.classList.contains("collapsing") ||
+      el.classList.contains("collapse_show")
+   ) {
+      return;
+   }
+   // удаляем класс collapse
+   el.classList.remove("collapse");
+   // сохраняем текущую высоту элемента в константу height (это значение понадобится ниже)
+   const height = el.offsetHeight;
+   // устанавливаем высоте значение 0
+   el.style["height"] = 0;
+   // не отображаем содержимое элемента, выходящее за его пределы
+   el.style["overflow"] = "hidden";
+   // создание анимации скольжения с помощью CSS свойства transition
+   el.style["transition"] = `height ${duration}ms ease`;
+   // добавляем класс collapsing
+   el.classList.add("collapsing");
+   // получим значение высоты (нам этого необходимо для того, чтобы просто заставить браузер выполнить перерасчет макета, т.к. он не сможет нам вернуть правильное значение высоты, если не сделает это)
+   el.offsetHeight;
+   // установим в качестве значения высоты значение, которое мы сохранили в константу height
+   el.style["height"] = `${height}px`;
+   // по истечении времени анимации this._duration
+   window.setTimeout(() => {
+      // удалим класс collapsing
+      el.classList.remove("collapsing");
+      // добавим классы collapse и collapse_show
+      el.classList.add("collapse");
+      el.classList.add("collapse_show");
+      // удалим свойства height, transition и overflow
+      el.style["height"] = "";
+      el.style["transition"] = "";
+      el.style["overflow"] = "";
+   }, duration);
+}
+function slideHide(el, duration = 500) {
+   // завершаем работу метода, если элемент содержит класс collapsing или collapse_show
+   if (
+      el.classList.contains("collapsing") ||
+      !el.classList.contains("collapse_show")
+   ) {
+      return;
+   }
+   // установим свойству height текущее значение высоты элемента
+   el.style["height"] = `${el.offsetHeight}px`;
+   // получим значение высоты
+   el.offsetHeight;
+   // установим CSS свойству height значение 0
+   el.style["height"] = 0;
+   // обрежем содержимое, выходящее за границы элемента
+   el.style["overflow"] = "hidden";
+   // добавим CSS свойство transition для осуществления перехода длительностью this._duration
+   el.style["transition"] = `height ${duration}ms ease`;
+   // удалим классы collapse и collapse_show
+   el.classList.remove("collapse");
+   el.classList.remove("collapse_show");
+   // добавим класс collapsing
+   el.classList.add("collapsing");
+   // после завершения времени анимации
+   window.setTimeout(() => {
+      // удалим класс collapsing
+      el.classList.remove("collapsing");
+      // добавим класс collapsing
+      el.classList.add("collapse");
+      // удалим свойства height, transition и overflow
+      el.style["height"] = "";
+      el.style["transition"] = "";
+      el.style["overflow"] = "";
+   }, duration);
+}
 // Popup
 const popupLinks = document.querySelectorAll(".modal__link");
 const lockPadding = document.querySelectorAll(".lock-padding");
@@ -381,7 +788,11 @@ function popupOpen(curentPopup) {
       }
       curentPopup.classList.add("open");
       curentPopup.addEventListener("click", function (e) {
-         if (!e.target.closest(".modal__content")) {
+         console.log(e);
+         if (
+            !e.target.closest(".modal__content") &&
+            !e.target.closest(".modal__wrapper")
+         ) {
             popupClose(e.target.closest(".modal"));
          }
       });
