@@ -483,6 +483,8 @@ function about() {
 
    function onScroll() {
       const header = document.querySelector(".header");
+      const aboutPage = document.querySelector(".about-page");
+      if (!aboutPage) return;
       const currentScroll = Math.max(0, window.scrollY);
       if (currentScroll > lastScroll) {
          header.style.translate = "0 -100%";

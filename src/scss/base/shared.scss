@@ -115,6 +115,10 @@ label {
       @include regular_14;
    }
 }
+.semibold_16 {
+   @include semibold_14;
+   font-size: 16px;
+}
 .semibold_14 {
    @include semibold_14;
 }
